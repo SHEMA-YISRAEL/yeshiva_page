@@ -1,8 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import yeshivaLogo from '../../public/img/yeshivaLogoColor.svg'; 
+
 
 const navItems = [
   { name: 'Inicio', href: '/' },
@@ -21,8 +24,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <img
-            src="/yeshivaLogoColor.svg"
+          <Image
+            src={yeshivaLogo}
             alt="Logo del Instituto"
             className="h-10 w-auto"
           />

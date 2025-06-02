@@ -86,7 +86,7 @@ const Values = () => {
             key={index}
             className="flex flex-col items-center text-center space-y-4"
           >
-            <img
+            <Image
               src={value.img}
               alt={value.name}
               className="w-24 h-24 object-contain"

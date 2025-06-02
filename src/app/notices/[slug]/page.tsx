@@ -7,6 +7,10 @@ import Link from "next/link";
 
 import imageArtNotice from '../../../../public/artNoticeBg.svg'
 
+export function generateStaticParams() {
+  return [{ slug: '1' }, { slug : '2' }, { slug: '3' }]
+}
+
 export default function ArticlePage() {
   const article = {
     title: "YESHIVA: Futuros Médicos y Enfermeros Maestros en Sutura",

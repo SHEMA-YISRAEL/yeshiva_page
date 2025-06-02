@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import yeshivaLogo from '../../public/img/yeshivaLogoColor.svg'; 
+
 import {
   FaFacebookF,
   FaInstagram,
@@ -58,7 +60,7 @@ const Footer = () => (
       <div className="flex items-start justify-start">
         <Link href="/" aria-label="Inicio">
           <Image
-            src="/yeshivaLogoColor.svg"
+            src={yeshivaLogo}
             alt="Logo del Instituto Yeshivá"
             width={180}
             height={64}

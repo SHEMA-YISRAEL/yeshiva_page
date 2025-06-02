@@ -6,11 +6,14 @@ import oferta1 from '../../../../public/academicOffers/academic.png';
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import Link from "next/link";
 
+export function generateStaticParams() {
+  return [{ slug: '1' }, { slug: '2' }, { slug: '3' }]
+}
 
 export default async function Page(
-  // { params }: { params: Promise<{ slug: string }> }
+   { params }: { params: Promise<{ slug: string }> }
 ) {
-  // const { slug } = await params;
+  const { slug } = await params;
 
   const careerInfo = {
     title: "EMERGENCIAS Y URGENCIAS MÉDICAS",
@@ -84,6 +87,7 @@ const carreras = [
   return (
         
     <>
+      {slug}
       {/* Imagen de portada */}
       <div className="relative w-full h-[40vh] md:h-[50vh]">
         <Image

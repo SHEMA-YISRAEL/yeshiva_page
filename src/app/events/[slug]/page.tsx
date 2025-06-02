@@ -6,10 +6,15 @@ import eventPicture from '../../../../public/img/eventPicture.jpg';
 
 import imageInfo from '../../../../public/eventBg.svg'; // por ejemplo
 
+
+export function generateStaticParams() {
+  return [{ slug: '1' }, { slug: '2' }, { slug: '3' }]
+}
+
 export default async function Page(
-  // { params }: { params: { slug: string } }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
-  // const { slug } = await params;
+  const { slug } = await params;
 
   const linkEvents = [
     { label: "Seminarios", link: '' },
@@ -69,6 +74,7 @@ export default async function Page(
         {/* Main event info */}
         <div className="w-full lg:w-2/3">
           {/* Top bar */}
+          { slug }
           <div className="flex flex-col md:flex-row md:justify-between text-xs mb-4 gap-2">
             <a className="font-bold content-center cursor-pointer mb-2 md:mb-0">
               Volver a la lista de eventos
