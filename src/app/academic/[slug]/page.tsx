@@ -7,8 +7,10 @@ import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import Link from "next/link";
 
 
-export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function Page(
+  // { params }: { params: Promise<{ slug: string }> }
+) {
+  // const { slug } = await params;
 
   const careerInfo = {
     title: "EMERGENCIAS Y URGENCIAS MÉDICAS",

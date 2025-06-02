@@ -6,8 +6,10 @@ import eventPicture from '../../../../public/img/eventPicture.jpg';
 
 import imageInfo from '../../../../public/eventBg.svg'; // por ejemplo
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = await params;
+export default async function Page(
+  // { params }: { params: { slug: string } }
+) {
+  // const { slug } = await params;
 
   const linkEvents = [
     { label: "Seminarios", link: '' },

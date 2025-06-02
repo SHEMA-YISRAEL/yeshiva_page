@@ -1,6 +1,6 @@
 import Image from "next/image";
-import SectionTitle from "@/components/commons/SectionTitle";
-import Card from "@/components/commons/Card";
+// import SectionTitle from "@/components/commons/SectionTitle";
+// import Card from "@/components/commons/Card";
 import articleImage from "../../../../public/img/artNotice.png";
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import Link from "next/link";
@@ -33,7 +33,7 @@ Con este curso de suturas, YESHIVA reafirma su compromiso con la excelencia en l
   };
 
   // Procesa los párrafos usando split por doble salto de línea
-  const paragraphs = article.content.split(/\n\s*\n/);
+  // const paragraphs = article.content.split(/\n\s*\n/);
 
   return (
     <>
