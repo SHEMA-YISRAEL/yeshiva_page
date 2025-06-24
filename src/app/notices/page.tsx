@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import SectionTitle from '@/components/commons/SectionTitle';
 import Card from '@/components/commons/Card';
 import noticiaImg from '../../../public/notices/news.png';
@@ -7,6 +7,9 @@ import { TfiControlForward, TfiControlBackward } from "react-icons/tfi";
 
 import Image from "next/image";
 import imageNotices from '../../../public/newsBg.svg'
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const loMasReciente = [
   {
@@ -153,7 +156,7 @@ const NoticiasPage = () => {
       {/* Contenido principal */}
       <div className="max-w-6xl mx-auto px-4 py-10 space-y-16">
         {/* Lo Más Reciente */}
-        <section className="mb-12">
+        <section className="mb-12" data-aos="fade-up" data-aos-duration="1200" >
           <SectionTitle size={2} title="LO MÁS RECIENTE" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
             {loMasReciente.map((item, index) => (
@@ -169,8 +172,8 @@ const NoticiasPage = () => {
         </section>
 
         {/* Otras Noticias con Paginación */}
-        <section>
-          <SectionTitle size={2} title="OTRAS NOTICIAS" />
+        <section data-aos="zoom-in" data-aos-duration="1200">
+          <SectionTitle size={2} title="OTRAS NOTICIAS"/>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-3 mt-4">
             {currentNoticias.map((item, index) => (
               <Card

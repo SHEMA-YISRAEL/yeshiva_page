@@ -1,11 +1,13 @@
-import React from 'react';
+"use client";
+import { useEffect } from "react";
 import SectionTitle from '@/components/commons/SectionTitle';
-
 import Image from "next/image";
-import imageClassRoom from '../../../public/sobreYeshivaBg.svg'
+import imageClassRoom from '../../../public/sobreYeshivaBg.svg';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const History = () => (
-  <section className="mb-12 space-y-4">
+  <section className="mb-12 space-y-4" data-aos="fade-up" data-aos-duration="900">
     <SectionTitle size={2} title="HISTORIA" />
     {[
       "Yeshiva es un instituto de formación tecnológica que nace con el propósito de ofrecer educación de excelencia en diversas áreas del conocimiento. No es solo un centro de aprendizaje, sino un espacio donde los estudiantes pueden desarrollar todo su potencial, fortaleciendo sus habilidades y preparándose para un futuro de éxito.",
@@ -20,7 +22,7 @@ const History = () => (
 );
 
 const MisionVision = () => (
-  <section className="mb-12">
+  <section className="mb-12" data-aos="fade-up" data-aos-delay="100" data-aos-duration="900">
     <div className="flex flex-col md:flex-row gap-8">
       {[
         {
@@ -31,8 +33,8 @@ const MisionVision = () => (
           title: 'VISIÓN',
           text: "Ser el instituto referente de formación técnica en salud a nivel nacional e internacional, con un enfoque práctico, que permita a nuestros estudiantes acceder a carreras profesionales de alta demanda, garantizando su inserción exitosa en el mercado laboral."
         }
-      ].map(({ title, text }) => (
-        <div key={title} className="w-full md:w-1/2 flex justify-center">
+      ].map(({ title, text }, i) => (
+        <div key={title} className="w-full md:w-1/2 flex justify-center" data-aos="fade-up" data-aos-delay={i * 200 + 200} data-aos-duration="900">
           <div className="max-w-prose">
             <SectionTitle size={2} title={title} />
             <p className="leading-relaxed mt-4 text-justify">{text}</p>
@@ -78,12 +80,15 @@ const Values = () => {
   ];
 
   return (
-    <section className="mb-12">
+    <section className="mb-12" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">
       <SectionTitle size={2} title="VALORES" />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
         {values.map((value, index) => (
           <div
             key={index}
+            data-aos="zoom-in"
+            data-aos-delay={100 * index}
+            data-aos-duration="800"
             className="flex flex-col items-center text-center space-y-4"
           >
             <Image
@@ -101,10 +106,13 @@ const Values = () => {
 };
 
 const AboutPage = () => {
+  useEffect(() => {
+    AOS.init({ once: true });
+  }, []);
   return (
     <main className="text-gray-700">
       {/* Imagen de cabecera */}
-      <div className="relative w-full h-[30vh] md:h-[50vh]">
+      <div className="relative w-full h-[30vh] md:h-[50vh]" data-aos="fade-in">
         <Image
           alt="Portada"
           src={imageClassRoom}

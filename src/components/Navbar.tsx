@@ -4,8 +4,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+<<<<<<< HEAD
 import yeshivaLogo from '../../public/img/yeshivaLogoColor.svg'; 
 
+=======
+import Header from './main/Header';
+import imageStudent from '../../public/medical student studying 1.svg';
+>>>>>>> ft-youth-design
 
 const navItems = [
   { name: 'Inicio', href: '/' },
@@ -20,8 +25,8 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-blue-950 px-6 py-4 shadow-md relative z-50">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+    <nav className="bg-[#EEB90A] bg-[url('/papelBg.svg')] bg-cover bg-center shadow-md relative">
+      <div className="max-w-7xl mx-auto flex px-6 py-4 justify-between items-center">
         {/* Logo */}
         <Link href="/">
           <Image
@@ -33,7 +38,7 @@ export default function Navbar() {
 
         {/* Botón para abrir/cerrar menú móvil */}
         <button
-          className="md:hidden text-white text-2xl"
+          className="md:hidden text-[#1B3863] text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           ☰
@@ -46,7 +51,7 @@ export default function Navbar() {
               <Link
                 href={href}
                 className={`${
-                  pathname === href ? 'text-yellow-300' : 'text-white'
+                  pathname === href ? 'font-bold text-[#204378]' : 'text-[#1B3863]'
                 } hover:text-yellow-200 transition-colors duration-200`}
               >
                 {name}
@@ -58,7 +63,7 @@ export default function Navbar() {
 
       {/* Menú móvil deslizante desde la derecha */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-blue-900 text-white transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-64 bg-[#1B3863] text-white transform transition-transform duration-300 ease-in-out ${
           menuOpen ? 'translate-x-0' : 'translate-x-full'
         } md:hidden shadow-lg z-50`}
       >
@@ -83,6 +88,12 @@ export default function Navbar() {
           ))}
         </ul>
       </div>
+    <Header
+        firstWord="Educacion"
+        titlePortrait="con proposito"
+        overlayImage={imageStudent}
+        overlayAlt="Estudiante repasando"
+      />  
     </nav>
   );
 }

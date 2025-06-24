@@ -8,6 +8,8 @@ import { FaWhatsapp } from "react-icons/fa";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -31,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        className={`bg-neutral-200 min-h-screen ${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />
