@@ -4,13 +4,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-<<<<<<< HEAD
+
 import yeshivaLogo from '../../public/img/yeshivaLogoColor.svg'; 
 
-=======
 import Header from './main/Header';
 import imageStudent from '../../public/medical student studying 1.svg';
->>>>>>> ft-youth-design
+
 
 const navItems = [
   { name: 'Inicio', href: '/' },
