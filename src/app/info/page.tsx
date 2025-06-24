@@ -1,3 +1,9 @@
+"use client";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
 import React from 'react';
 import SectionTitle from '@/components/commons/SectionTitle';
 
@@ -26,6 +32,9 @@ const officeHours = [
 ];
 
 const InformacionPage = () => {
+  useEffect(() => {
+    AOS.init({ once: true });
+  }, []);
   return (
     <main className="text-gray-700">
       {/* Imagen de cabecera */}
@@ -39,10 +48,10 @@ const InformacionPage = () => {
       </div>
 
       {/* Contenido principal */}
-      <div className="max-w-4xl mx-auto px-4 py-10 space-y-12 ">
+      <div className="max-w-4xl mx-auto px-4 py-10 space-y-12">
 
         {/* Contacto */}
-        <section>
+        <section data-aos="fade-up" data-aos-duration="1200">
           <div className='mb-5'><SectionTitle size={2} title="Contacto" /></div>
           <p className="text-justify leading-relaxed">Administración</p>
           <ul className="list-disc list-inside mt-4 space-y-2">
@@ -53,11 +62,11 @@ const InformacionPage = () => {
 
         {/* Dirección */}
         <section>
-          <div className="mb-5">
+          <div className="mb-5" data-aos="fade-left" data-aos-duration="1200">
             <SectionTitle size={2} title="Dirección" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start" data-aos="fade-left" data-aos-duration="1200">
             {/* Columna izquierda: Información */}
             <div>
               {locations.map(({ title, address }, index) => (
@@ -69,7 +78,7 @@ const InformacionPage = () => {
             </div>
 
             {/* Columna derecha: Mapa */}
-            <div>
+            <div data-aos="flip-left" data-aos-duration="900">
               <iframe
                 title="Ubicación Yeshiva"
                 src="https://www.google.com/maps/d/embed?mid=1psC2DX3hfy8NBiEZSM-P7bBdnmrhAiE&ehbc=2E312F"
@@ -85,7 +94,7 @@ const InformacionPage = () => {
         </section>
 
         {/* Horarios */}
-        <section>
+        <section data-aos="flip-up" data-aos-duration="1200">
           <div className='mb-5'><SectionTitle size={2} title="Horarios de atención" /></div>
           <ul className="list-disc list-inside space-y-1">
             {officeHours.map((line, index) => (

@@ -1,10 +1,12 @@
-import React from 'react';
+"use client";
+import { useEffect } from "react";
 import SectionTitle from '@/components/commons/SectionTitle';
 import Card from '@/components/commons/Card';
 import oferta1 from '../../../public/academicOffers/academic.png';
-
 import Image from "next/image";
 import imageAcademic from '../../../public/academicBg.svg';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const tecnicosSuperiores = [
   {
@@ -69,7 +71,7 @@ const OfertaAcademicaPage = () => {
   return (
     <main className="text-gray-700">
       {/* Imagen de cabecera */}
-      <div className="relative w-full h-[30vh] md:h-[50vh]">
+      <div className="relative w-full h-[30vh] md:h-[50vh]"data-aos="fade-in">
         <Image
           alt="Portada"
           src={imageAcademic}
@@ -81,49 +83,68 @@ const OfertaAcademicaPage = () => {
       {/* Contenido principal */}
       <div className="max-w-6xl mx-auto px-4 py-10 space-y-16">
         {/* Técnico Superior */}
-        <section className="mb-12">
+        <section className="mb-12" data-aos="fade-up" data-aos-duration="900">
           <SectionTitle size={2} title="TÉCNICO SUPERIOR" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
             {tecnicosSuperiores.map((item, index) => (
-              <Card
+              <div
                 key={index}
-                cardTitle={item.cardTitle}
-                carDescription={item.carDescription}
-                cardImage={item.cardImage}
-                variant='news'
-              />
+                data-aos="zoom-in"
+                data-aos-delay={100 * index}
+                data-aos-duration="800"
+              >
+                <Card
+                  cardTitle={item.cardTitle}
+                  carDescription={item.carDescription}
+                  cardImage={item.cardImage}
+                  variant='news'
+                />
+              </div>
             ))}
           </div>
         </section>
 
         {/* Técnico Medio */}
         <section>
-          <SectionTitle size={2} title="TÉCNICO MEDIO" />
+          <SectionTitle size={2} title="TÉCNICO MEDIO" data-aos-delay="100" data-aos-duration="900"/>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
             {tecnicosMedios.map((item, index) => (
-              <Card
+              <div
                 key={index}
-                cardTitle={item.cardTitle}
-                carDescription={item.carDescription}
-                cardImage={item.cardImage}
-                variant='news'
-              />
+                data-aos="zoom-in"
+                data-aos-delay={100 * index}
+                data-aos-duration="800"
+              >
+                <Card
+                  cardTitle={item.cardTitle}
+                  carDescription={item.carDescription}
+                  cardImage={item.cardImage}
+                  variant='news'
+                />
+              </div>
             ))}
           </div>
         </section>
 
         {/* Becas */}
-        <section>
+        <section data-aos="fade-up" data-aos-delay="200" data-aos-duration="900">
           <SectionTitle size={2} title="ACCEDE A NUESTRAS BECAS" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
             {becas.map((item, index) => (
-              <Card
+              <div
                 key={index}
-                cardTitle={item.cardTitle}
-                carDescription={item.carDescription}
-                cardImage={item.cardImage}
-                variant='beca'
-              />
+                data-aos="zoom-in"
+                data-aos-delay={100 * index}
+                data-aos-duration="800"
+              >
+                <Card
+                  cardTitle={item.cardTitle}
+                  carDescription={item.carDescription}
+                  cardImage={item.cardImage}
+                  variant='beca'
+                />
+              </div>
+
             ))}
           </div>
         </section>
