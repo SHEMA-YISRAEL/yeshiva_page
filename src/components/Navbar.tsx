@@ -87,7 +87,7 @@ export default function Navbar() {
           ))}
         </ul>
       </div>
-      <Header
+    <Header
         overlayImage={imageStudent}
         overlayAlt="Estudiante repasando"
       />  
