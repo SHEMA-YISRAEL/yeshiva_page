@@ -88,8 +88,6 @@ export default function Navbar() {
         </ul>
       </div>
     <Header
-        firstWord="Educacion"
-        titlePortrait="con proposito"
         overlayImage={imageStudent}
         overlayAlt="Estudiante repasando"
       />  
