@@ -1,17 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa'
 
 import bgFooter from '../../public/bg-footer.svg';
 
 import {
   FaFacebookF,
-  // FaInstagram,
   FaTiktok,
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
-  FaLinkedinIn
+  FaLinkedinIn,
+  FaInstagram
 } from 'react-icons/fa';
 
 // --- Constantes para links y redes ---

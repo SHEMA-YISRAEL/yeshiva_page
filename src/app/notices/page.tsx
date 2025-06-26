@@ -1,5 +1,5 @@
 'use client';
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import SectionTitle from '@/components/commons/SectionTitle';
 import Card from '@/components/commons/Card';
 import noticiaImg from '../../../public/notices/news.png';
@@ -8,7 +8,7 @@ import { TfiControlForward, TfiControlBackward } from "react-icons/tfi";
 import Image from "next/image";
 import imageNotices from '../../../public/newsBg.svg'
 
-import AOS from "aos";
+// import AOS from "aos";
 import "aos/dist/aos.css";
 
 const loMasReciente = [

@@ -1,11 +1,11 @@
 "use client";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import SectionTitle from '@/components/commons/SectionTitle';
 import Card from '@/components/commons/Card';
 import oferta1 from '../../../public/academicOffers/academic.png';
-import Image from "next/image";
-import imageAcademic from '../../../public/academicBg.svg';
-import AOS from "aos";
+// import Image from "next/image";
+// import imageAcademic from '../../../public/academicBg.svg';
+// import AOS from "aos";
 import "aos/dist/aos.css";
 
 const tecnicosSuperiores = [

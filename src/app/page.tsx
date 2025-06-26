@@ -3,16 +3,16 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Description from "@/components/main/Description";
+// import Description from "@/components/main/Description";
 import AcademicOffer from "@/components/main/AcademicOffer";
 import News from "@/components/main/News";
 import Events from "@/components/main/Events";
 import Thoughts from "@/components/main/Thoughts";
 import SignLink from "@/components/main/SignLink";
-import Image from "next/image";
+// import Image from "next/image";
 
-import PageReveal from "@/components/page-reveal";
-import Header from "@/components/main/Header";
+// import PageReveal from "@/components/page-reveal";
+// import Header from "@/components/main/Header";
 
 
 export default function Home() {
@@ -20,8 +20,8 @@ export default function Home() {
     AOS.init({ once: true });
   }, []);
 
-  const firstWord = 'Impulsando sueños, ';
-  const titlePortait = "creando oportunidades";
+  // const firstWord = 'Impulsando sueños, ';
+  // const titlePortait = "creando oportunidades";
 
   return (
     <div className="relative">
