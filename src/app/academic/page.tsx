@@ -70,7 +70,7 @@ const becas = [
 const OfertaAcademicaPage = () => {
   return (
     <main className="text-gray-700">
-      {/* Imagen de cabecera */}
+      {/* Imagen de cabecera 
       <div className="relative w-full h-[30vh] md:h-[50vh]"data-aos="fade-in">
         <Image
           alt="Portada"
@@ -78,7 +78,7 @@ const OfertaAcademicaPage = () => {
           fill
           className="object-cover brightness-50"
         />
-      </div>
+      </div>*/}
 
       {/* Contenido principal */}
       <div className="max-w-6xl mx-auto px-4 py-10 space-y-16">

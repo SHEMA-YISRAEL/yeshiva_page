@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Card from '../commons/Card';
 import imageDoctor from '../../../public/img/medico.jpg';
+import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 const baseCards = [
   {
@@ -33,6 +34,7 @@ export default function InfiniteCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
 
+  // Responsive visible cards
   const getVisibleCards = () => {
     if (window.innerWidth < 640) return 1;
     if (window.innerWidth < 768) return 2;
@@ -48,35 +50,65 @@ export default function InfiniteCarousel() {
     return () => window.removeEventListener('resize', updateVisibleCards);
   }, []);
 
+  // Infinite effect
   const cards = [...baseCards, ...baseCards.slice(0, visibleCards)];
-  const totalSlides = baseCards.length;
+  const totalSlides = baseCards.length-1;
 
-  // Avance automático
-  useEffect(() => {
+  // Elimina el auto-avance para solo manual (si quieres auto, descomenta este bloque)
+  
+  /*useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => prev + 1);
-      setIsTransitioning(true);
+      nextSlide();
     }, 4000);
-
     return () => clearInterval(interval);
-  }, [visibleCards]);
+  }, [visibleCards, currentSlide]);
+  */
+  //loop carrusel infinito
 
-  // Reset después del último slide para el efecto infinito
+  // Reset para loop infinito
   useEffect(() => {
     if (currentSlide === totalSlides) {
       const timeout = setTimeout(() => {
         setIsTransitioning(false);
         setCurrentSlide(0);
-      }, 500); // igual al tiempo de transición
-
+      }, 500);
       return () => clearTimeout(timeout);
     } else {
       setIsTransitioning(true);
     }
   }, [currentSlide, totalSlides]);
 
+
+
+  // Función para slide manual
+  const nextSlide = () => {
+    if (currentSlide < totalSlides) {
+      setCurrentSlide((prev) => prev + 1);
+      setIsTransitioning(true);
+    }
+  };
+  const prevSlide = () => {
+    if (currentSlide === 0) {
+      setCurrentSlide(totalSlides - 1);
+    } else {
+      setCurrentSlide((prev) => prev - 1);
+      setIsTransitioning(true);
+    }
+  };
+
   return (
-    <div className="w-full overflow-hidden my-5">
+    <div className="w-full overflow-hidden my-5 relative">
+      {/* Flecha Izquierda */}
+      <button
+        className="absolute z-20 left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-yellow-400 rounded-full shadow p-2 text-3xl text-blue-900 transition"
+        onClick={prevSlide}
+        aria-label="Anterior"
+        style={{ left: 8 }}
+      >
+        <IoChevronBack />
+      </button>
+
+      {/* Carrusel */}
       <div className="relative">
         <div
           ref={containerRef}
@@ -98,21 +130,33 @@ export default function InfiniteCarousel() {
                 cardTitle={card.careerName}
                 carDescription={card.description}
                 cardImage={card.image}
-                variant="news"
+                variant='news'
               />
             </div>
           ))}
         </div>
       </div>
 
-      {/* Indicadores */}
+      {/* Flecha Derecha */}
+      <button
+        className="absolute z-20 right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-yellow-400 rounded-full shadow p-2 text-3xl text-blue-900 transition"
+        onClick={nextSlide}
+        aria-label="Siguiente"
+        style={{ right: 8 }}
+      >
+        <IoChevronForward />
+      </button>
+
+      {/* Indicadores clickeables */}
       <div className="flex justify-center mt-4 space-x-2">
         {baseCards.map((_, index) => (
-          <span
+          <button
             key={index}
             className={`w-3 h-3 rounded-full transition-colors duration-300 ${
               index === currentSlide % totalSlides ? 'bg-yellow-500' : 'bg-gray-300'
             }`}
+            onClick={() => setCurrentSlide(index)}
+            aria-label={`Ir al slide ${index + 1}`}
           />
         ))}
       </div>

@@ -94,7 +94,9 @@ const Values = () => {
             <Image
               src={value.img}
               alt={value.name}
-              className="w-24 h-24 object-contain"
+              width={120}
+              height={120}
+              className="object-contain"
             />
             <h3 className="text-lg font-semibold text-blue-900">{value.name}</h3>
             <p className="px-2">{value.desc}</p>

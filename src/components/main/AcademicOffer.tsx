@@ -4,7 +4,7 @@ import SectionTitle from "../commons/SectionTitle";
 import InfiniteCarousel from "./InfiniteCarousel";
 
 const AcademicOffer = () => {
-  const academicOffer = ['Carreras', 'Cursos', 'Capacitaciones'];
+  const academicOffer = ['Carreras'];
 
   return (
     <div className="px-4 sm:px-6 lg:px-8">

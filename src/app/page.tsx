@@ -24,20 +24,19 @@ export default function Home() {
   const titlePortait = "creando oportunidades";
 
   return (
-    //<PageReveal>
-    <div className="">
+    <div className="relative">
       {/* Main Sections */}
       <div
         className="max-w-5xl mx-auto px-4 sm:px-6 md:px-10 py-5"
         data-aos="zoom-in"
-        data-aos-duration="1800"
+        data-aos-duration="1200"
       >
-        <Description />
+        {/* <Description /> */}
         <AcademicOffer />
       </div>
 
       {/* Call to Action */}
-      <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="1800">
+      <div data-aos="fade-up" data-aos-delay="150" data-aos-duration="1200">
         <SignLink />
       </div>
 
@@ -50,16 +49,15 @@ export default function Home() {
       >
         <News />
       </div>
-            <div
+      <div
         className="max-w-5xl mx-auto px-4 sm:px-6 md:px-10 py-10"
         data-aos="fade-right"
         data-aos-delay="400"
-        data-aos-duration="2100"
+        data-aos-duration="1500"
       >
         <Events />
         <Thoughts />
       </div>
     </div>
-    //</PageReveal>
   );
 }

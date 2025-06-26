@@ -31,7 +31,7 @@ export default function Navbar() {
           <Image
             src={yeshivaLogo}
             alt="Logo del Instituto"
-            className="h-10 w-auto"
+            className="h-10 w-full"
           />
         </Link>
 

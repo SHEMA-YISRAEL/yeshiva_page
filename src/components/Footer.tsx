@@ -75,10 +75,8 @@ const Footer = () => (
       
       <Image
         src={bgFooter}
-        alt="Footer Background"
-        width={1920}
-        
-        className="absolute object-fill z-0"
+        alt="Footer Background" 
+        className="absolute object-fill w-full z-0"
       />
       
       <div className="absolute inset-0  bg-opacity-60 z-10"></div>
@@ -159,5 +157,4 @@ const Footer = () => (
   </div>
       
 );
-
 export default Footer;
