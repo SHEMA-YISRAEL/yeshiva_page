@@ -3,17 +3,18 @@
 import Link from 'next/link';
 import React, { FC } from 'react';
 
+import {roboto } from '@/app/services/fonts';
 interface SectionTitleProps {
   title: string;
   size: number;
   linkTo?: string; // ← Enlace opcional
 }
 
-const SectionTitle: FC<SectionTitleProps> = ({ title, size, linkTo }) => {
+const SectionTitle: FC<SectionTitleProps> = ({ title='', size=5, linkTo }) => {
   const Heading = (
-    <h2 className={`text-slate-900 text-${size}xl font-bold`}>
+    <h1 className={`${roboto.className} md:text-${size}xl text-slate-900 sm:text-${size}xl lg:text-${size}xl`}>
       {title}
-    </h2>
+    </h1>
   );
 
   return (

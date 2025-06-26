@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Link from "next/link";
@@ -8,17 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { geistSans, geistMono, roboto, robotoSerif, } from "@/app/services/fonts";
 
 export const metadata: Metadata = {
   title: "Yeshiva - Shema Yisrael",
@@ -33,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`relative bg-neutral-200 min-h-screen ${geistSans.variable} ${geistMono.variable} antialiased`}>
+        className={`relative bg-neutral-200 min-h-screen ${roboto.variable} ${geistMono.variable} ${robotoSerif.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />

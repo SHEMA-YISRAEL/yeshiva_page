@@ -13,7 +13,9 @@ import valueIntegrity from '../../../public/img/values/integridad.png';
 import valueExcelence from '../../../public/img/values/excelencia.png';
 
 import pastor from '../../../public/img/pastor.png';
+import { robotoSerif } from '@/app/services/fonts';
 
+const sizeTitle = 5
 const paragraphsHistory= [
   "Yeshiva es un instituto de formación tecnológica que nace con el propósito de ofrecer educación de excelencia en diversas áreas del conocimiento. No es solo un centro de aprendizaje, sino un espacio donde los estudiantes pueden desarrollar todo su potencial, fortaleciendo sus habilidades y preparándose para un futuro de éxito.",
   "Formamos parte de SHEMAYISRRAEL S.R.L., un grupo empresarial con una identidad sólida y principios bien definidos. Gracias a esto, contamos con el respaldo de unidades productivas estratégicas, como un centro médico privado, que servirá de apoyo práctico para ciertas áreas de estudio, permitiendo a nuestros estudiantes aplicar sus conocimientos en un entorno real.",
@@ -71,19 +73,23 @@ interface ParagraphWithTitleProps {
   paragraph: string[];
 }
 
-
-
 const Paragraph : React.FC<ParagraphWithTitleProps> = ({title='', paragraph = []}) => (
-  <section className="mb-12 space-y-4" data-aos="fade-up" data-aos-duration="900">
+  <section className = {`space-y-4`}>
     {
-      title && <SectionTitle size={2} title={title} />
+      title && <SectionTitle size={sizeTitle} title={title} />
     }
     {paragraph.map((paragraph, index) => (
-      <p key={index} className="leading-relaxed text-justify">{paragraph}</p>
+      <p 
+        key={index} 
+        className={`${robotoSerif.className} leading-relaxed text-justify mb-6 mt-6` }
+        data-aos="fade-up" 
+        data-aos-delay={`${index * 200}`} 
+        data-aos-duration="900">
+        {paragraph}
+      </p>
     ))}
   </section>
 );
-
 
 const History = () => {
   useEffect(() => {
@@ -92,17 +98,17 @@ const History = () => {
 
   return (
     <>
-      <SectionTitle size={2} title="HISTORIA"  />
+      <SectionTitle size={sizeTitle} title="HISTORIA"  />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <Paragraph title ="" paragraph={paragraphsHistory} />
-        <div className="place-content-center" >
+        <div className="flex justify-center" >
           <Image
             alt="Portada"
             src={historyImage}
             // fill
             // data-aos="fade-in"
-            className="object-cover h-full  brightness-50 rounded-4xl"
+            className="object-cover h-3/4 mt-10 brightness-50 rounded-4xl"
           />
         </div>
       </div>  
@@ -112,54 +118,29 @@ const History = () => {
 }
 
 
-// const MisionVision = () => (
-//   <section className="mb-12" data-aos="fade-up" data-aos-delay="100" data-aos-duration="900">
-//     <div className="flex flex-col md:flex-row gap-8">
-//       {[
-//         {
-//           title: 'MISIÓN',
-//           text: "Formar profesionales altamente capacitados con una sólida formación teórica práctica que les permita alcanzar sus sueños y desarrollar habilidades que les conecten con oportunidades reales."
-//         },
-//         {
-//           title: 'VISIÓN',
-//           text: "Ser el instituto referente de formación técnica en salud a nivel nacional e internacional, con un enfoque práctico, que permita a nuestros estudiantes acceder a carreras profesionales de alta demanda, garantizando su inserción exitosa en el mercado laboral."
-//         }
-//       ].map(({ title, text }, i) => (
-//         <div key={title} className="w-full md:w-1/2 flex justify-center" data-aos="fade-up" data-aos-delay={i * 200 + 200} data-aos-duration="900">
-//           <div className="max-w-prose">
-//             <SectionTitle size={2} title={title} />
-//             <p className="leading-relaxed mt-4 text-justify">{text}</p>
-//           </div>
-//         </div>
-//       ))}
-//     </div>
-//   </section>
-// );
 
 const Values = () => {
-  // useEffect(() => {
-  //   AOS.init({ once: true });
-  // }, []);
   return (
-    <section className="mb-12" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">
-      <SectionTitle size={2} title="VALORES" />
-      <div className="flex justify-center mt-8">
+    <section className="mb-10" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">
+      <SectionTitle size={sizeTitle} title="VALORES" />
+      <div className="flex justify-center mt-8 mx-10 sm:mx5">
         {values.map((value, index) => (
           <div
             key={index}
-            // data-aos="zoom-in"
+            //data-aos="zoom-in"
             // data-aos-delay={100 * index}
             // data-aos-duration="800"
-            // className="flex flex-col items-center text-center space-y-4"
+            className="flex-1 transform transition duration-300 ease-out hover:scale-120 hover:animate-bounce-smooth"
+            // 
           >
             <Image
               src={value.img}
               alt={value.name}
-              width={120}
+              
               height={120}
               // height={100}
               // width={100}
-              className="object-contain"
+              className="object-contain w-full"
             />
             {/* <h3 className="text-lg font-semibold text-blue-900">{value.name}</h3>
             <p className="px-2">{value.desc}</p> */}
@@ -177,29 +158,28 @@ const InternationalSupport = () => {
     "Hoy, el Dr. PhD. Seok-Jong Hong, como Rector del Instituto, lidera este proyecto con dedicación, integridad y la firme convicción de que, con las oportunidades adecuadas, cada joven tiene el potencial de transformar su vida."
   ];
 
-  return <>
-    <SectionTitle size={2} title="APOYO INTERNACIONAL" />
+  return (<>
+    <SectionTitle size={sizeTitle} title="APOYO INTERNACIONAL" />
     {
-      paragraphs.map((paragraph, index) => (
-        <p key={index} className="leading-relaxed text-justify mb-4" data-aos="fade-up" data-aos-delay={`${index * 200}`} data-aos-duration="900">
-          {paragraph}
-        </p>
-      ))  
+      <Paragraph title="" paragraph={paragraphs} />
     }
-    <div className="text-center mb-12 border-l-4 border-blue-500 pl-4 
-    italic text-sm" data-aos="fade-up" data-aos-duration="900">
-      <p className="text-gray-800 text-sm">
-        “Porque yo sé los planes que tengo para ustedes -dice Hashem-. Son planes de bien y no de desastre, para darles un futuro y una esperanza”
-      </p>
-      <p className="text-sm  mt-2">Jeremias 29:11</p>
+    {/* "text-center mb-12 border-l-4 border-blue-500 pl-4 italic text-sm" */}
+    <div className="flex justify-center">
+      <div className='w-3/4 border-1 border-[#366AAC] shadow-2xl text-center border-solid rounded-xl italic text-sm p-5' data-aos="fade-up" data-aos-duration="900">
+        <p className="text-gray-800 text-sm">
+          “Porque yo sé los planes que tengo para ustedes -dice Hashem-. Son planes de bien y no de desastre, para darles un futuro y una esperanza”
+        </p>
+        <p className="text-sm  mt-2">Jeremias 29:11</p>
+      </div>
     </div>
     <div className="flex justify-center mt-8">
       <Image
         src={pastor}
         alt="Apoyo Internacional"
-        width={500}
-        height={300}
-        className="object-contain"
+        // width={500}
+        // height={300}
+        
+        className="object-contain w-full"
       />
     </div>
 
@@ -210,7 +190,7 @@ const InternationalSupport = () => {
       <span className="font-bold">Imagen: </span>
       <span>Dr. PhD. Seok Jong Hong</span>
     </div>
-  </>
+  </>)
 }
 
 const AboutPage = () => {
@@ -231,7 +211,7 @@ const AboutPage = () => {
       <div className="max-w-5xl mx-auto px-4 py-10">
         
         <History/>
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-8 mb-12" 
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-8" 
         // data-aos="fade-in"
         >
           <Paragraph  title="MISIÓN" paragraph={paragraphMision} />
