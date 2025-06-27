@@ -9,7 +9,7 @@ import yeshivaLogo from '../../public/img/yeshivaLogoColor.svg';
 
 import Header from './main/Header';
 import imageStudent from '../../public/medical student studying 1.svg';
-
+import bgNavbar from '../../public/papelBg.svg';
 
 const navItems = [
   { name: 'Inicio', href: '/' },
@@ -24,8 +24,13 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-[#EEB90A] bg-[url('/papelBg.svg')] bg-cover bg-center shadow-md relative">
-      <div className="max-w-7xl mx-auto flex px-6 py-4 justify-between items-center">
+    <nav className="shadow-md relative -z-0">
+      <Image
+        src={bgNavbar}
+        alt="Footer Background" 
+        className="absolute object-cover bg-[#EEB90A] h-full w-full -z-2"
+      />
+      <div className="max-w-7xl mx-auto flex px-6 py-4 justify-between items-center z-5">
         {/* Logo */}
         <Link href="/">
           <Image
@@ -34,7 +39,7 @@ export default function Navbar() {
             className="h-10 w-full"
           />
         </Link>
-
++
         {/* Botón para abrir/cerrar menú móvil */}
         <button
           className="md:hidden text-[#1B3863] text-2xl"
