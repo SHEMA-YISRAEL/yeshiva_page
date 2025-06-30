@@ -2,29 +2,32 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Card from '../commons/Card';
-import imageDoctor from '../../../public/img/medico.jpg';
+import imageUrgencias from '../../../public/urgencias.png';
+import imageLaboratorio from '../../../public/laboratorio.png';
+import imageNutricion from '../../../public/nutricion.png';
+import imageEnfermeria from '../../../public/enfermeria.png';
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 const baseCards = [
   {
     careerName: 'Enfermería',
     description: 'Licenciatura en auxiliar de enfermería',
-    image: imageDoctor,
+    image: imageEnfermeria,
   },
   {
     careerName: 'Emergencias médicas',
     description: 'Técnico superior en emergencias y urgencias',
-    image: imageDoctor,
+    image: imageUrgencias,
   },
   {
     careerName: 'Terapia Física',
     description: 'Licenciatura en rehabilitación y fisioterapia',
-    image: imageDoctor,
+    image: imageLaboratorio,
   },
   {
     careerName: 'Nutrición',
     description: 'Técnico superior en nutrición y dietética',
-    image: imageDoctor,
+    image: imageNutricion,
   },
 ];
 
