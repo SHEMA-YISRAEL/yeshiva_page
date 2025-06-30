@@ -1,51 +1,38 @@
 "use client";
-// import { useEffect } from "react";
+import { useEffect } from "react";
 import SectionTitle from '@/components/commons/SectionTitle';
 import Card from '@/components/commons/Card';
+import imageUrgencias from '../../../public/urgencias.png';
+import imageLaboratorio from '../../../public/laboratorio.png';
+import imageNutricion from '../../../public/nutricion.png';
+import imageEnfermeria from '../../../public/enfermeria.png';
 import oferta1 from '../../../public/academicOffers/academic.png';
-// import Image from "next/image";
-// import imageAcademic from '../../../public/academicBg.svg';
-// import AOS from "aos";
+
 import "aos/dist/aos.css";
 
 const tecnicosSuperiores = [
   {
-    cardTitle: 'Técnico Superior en Enfermería',
+    cardTitle: 'Técnico superior en emergencias y urgencias',
     carDescription: 'Formación profesional con prácticas clínicas en hospitales.',
-    cardImage: oferta1,
+    cardImage: imageUrgencias,
   },
   {
-    cardTitle: 'Técnico Superior en Fisioterapia',
-    carDescription: 'Estudios en rehabilitación y terapia física avanzada.',
-    cardImage: oferta1,
-  },
-  {
-    cardTitle: 'Técnico Superior en Bioquímica',
-    carDescription: 'Especialízate en análisis clínicos de laboratorio.',
-    cardImage: oferta1,
+    cardTitle: 'Técnico Superior Laboratorio de Anatomía Patológica',
+    carDescription: 'Ayuda en el diagnóstico de enfermedades.',
+    cardImage: imageLaboratorio,
   },
 ];
 
 const tecnicosMedios = [
   {
-    cardTitle: 'Técnico Medio en Farmacia',
-    carDescription: 'Aprende sobre medicamentos, recetas y gestión farmacéutica.',
-    cardImage: oferta1,
+    cardTitle: 'Técnico Medio Nutrición y Dietética',
+    carDescription: 'Brinda apoyo en tratamientos nutricionales con buenos hábitos alimenticios. ',
+    cardImage: imageNutricion,
   },
   {
-    cardTitle: 'Técnico Medio en Nutrición',
-    carDescription: 'Formación básica sobre alimentación saludable y dietética.',
-    cardImage: oferta1,
-  },
-  {
-    cardTitle: 'Técnico Medio en Radiología',
-    carDescription: 'Operación de equipos de imagen médica.',
-    cardImage: oferta1,
-  },
-  {
-    cardTitle: 'Técnico Medio en Bioquímica',
-    carDescription: 'Especialízate en análisis clínicos',
-    cardImage: oferta1,
+    cardTitle: 'Técnico Medio Enfermería',
+    carDescription: 'Prepárate para brindar atención integral a los pacientes, participando en la prevención, recuperación y rehabilitación.',
+    cardImage: imageEnfermeria,
   },
 ];
 
@@ -70,22 +57,12 @@ const becas = [
 const OfertaAcademicaPage = () => {
   return (
     <main className="text-gray-700">
-      {/* Imagen de cabecera 
-      <div className="relative w-full h-[30vh] md:h-[50vh]"data-aos="fade-in">
-        <Image
-          alt="Portada"
-          src={imageAcademic}
-          fill
-          className="object-cover brightness-50"
-        />
-      </div>*/}
-
       {/* Contenido principal */}
       <div className="max-w-6xl mx-auto px-4 py-10 space-y-16">
         {/* Técnico Superior */}
         <section className="mb-12" data-aos="fade-up" data-aos-duration="900">
           <SectionTitle size={2} title="TÉCNICO SUPERIOR" />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
             {tecnicosSuperiores.map((item, index) => (
               <div
                 key={index}
@@ -107,7 +84,7 @@ const OfertaAcademicaPage = () => {
         {/* Técnico Medio */}
         <section>
           <SectionTitle size={2} title="TÉCNICO MEDIO" data-aos-delay="100" data-aos-duration="900"/>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
             {tecnicosMedios.map((item, index) => (
               <div
                 key={index}

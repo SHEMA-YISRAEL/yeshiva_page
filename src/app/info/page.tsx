@@ -2,13 +2,9 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-
 import React from 'react';
 import SectionTitle from '@/components/commons/SectionTitle';
 
-import Image from "next/image";
-import imageInfo from '../../../public/informationBg.svg'
 
 const contactInfo = {
   phone: '+591 77418638',
@@ -37,16 +33,6 @@ const InformacionPage = () => {
   }, []);
   return (
     <main className="text-gray-700">
-      {/* Imagen de cabecera */}
-      <div className="relative w-full h-[30vh] md:h-[50vh]">
-        <Image
-          alt="Portada"
-          src={imageInfo}
-          fill
-          className="object-cover brightness-50"
-        />
-      </div>
-
       {/* Contenido principal */}
       <div className="max-w-4xl mx-auto px-4 py-10 space-y-12">
 

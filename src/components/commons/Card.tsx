@@ -81,7 +81,7 @@ const Card: FC<CardProps> = ({
     >
       <div className={`flip-card-inner w-full h-full ${enableFlip && flipped ? "is-flipped" : ""}`}>
         {/* Cara frontal */}
-        <div className="flip-card-front absolute w-full h-full rounded-2xl overflow-hidden shadow-xl">
+        <div className="flip-card-front absolute w-full h-full rounded-2xl overflow-hidden">
           {cardImage && (
             <Image
               src={cardImage}
@@ -115,7 +115,7 @@ const Card: FC<CardProps> = ({
             {/* Ejemplo de info diferente */}
             {variant === "news" && (
               <>
-                <div className="mb-2 text-xl  font-bold ">{cardTitle}</div>
+                <div className="mb-2 text-xl font-bold ">{cardTitle}</div>
                 <div>{carDescription}</div>
               </>
             )}
