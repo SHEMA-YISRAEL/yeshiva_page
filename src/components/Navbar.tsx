@@ -15,7 +15,7 @@ const navItems = [
   { name: 'Inicio', href: '/' },
   { name: 'Sobre Yeshiva', href: '/about' },
   { name: 'Oferta Académica', href: '/academic' },
-  { name: 'Noticias', href: '/notices' },
+  //{ name: 'Noticias', href: '/notices' },
   { name: 'Información', href: '/info' },
 ];
 

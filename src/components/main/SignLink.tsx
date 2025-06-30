@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logoYeshiva from '../../../public/logoYeshiva.svg'
+import pattern from '../../../public/pattern.png';
 import Link from 'next/link';
 import { IoDocumentText } from "react-icons/io5";
 
@@ -7,11 +8,12 @@ const SignLink = () => {
   return (
     <div className="relative">
       {/* Fondo con patrón */}
-      <div className="absolute inset-0 bg-[url('/pattern.png')] bg-cover bg-center w-full z-0 md:h-150 lg:h-full" />
-      
-      {/* Overlay con opacidad */}
-    
-      
+      <div className="absolute inset-0 bg-cover bg-center w-full z-0" />
+      <Image
+          className="absolute inset-0 w-full h-full md:h-150 lg:h-full bg-cover bg-center object-cover z-10"
+          alt="Logo Yeshiva"
+          src={pattern}
+        />   
       {/* Contenido */}
       <div className="relative z-20 grid place-items-center px-4 md:px-10 py-20 text-center">
         <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">

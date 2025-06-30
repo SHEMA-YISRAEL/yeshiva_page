@@ -17,14 +17,14 @@ import {
 const SERVICES_LINKS = [
   { label: 'Contáctanos', href: '/info' },
   { label: 'Eventos', href: '/events' },
-  { label: 'Noticias', href: '/notices' },
+  { label: 'Noticias', href: '/' },
 ];
 
 const SOCIAL_LINKS = [
-  { icon: FaFacebookF, href: 'https://www.facebook.com/yeshivaisraelcochabamba', label: 'Facebook' },
-  { icon: FaInstagram, href: 'https://www.instagram.com/yeshivaisraelcochabamba', label: 'Instagram' },
-  { icon: FaTiktok, href: 'https://www.tiktok.com/@yeshivaisraelcochabamba', label: 'TikTok' },
-  { icon: FaLinkedinIn, href: 'https://www.linkedin.com/feed/', label: 'Linkedin' },
+  { icon: FaFacebookF, href: 'https://www.facebook.com/profile.php?id=61572773797188&locale=es_LA', label: 'Facebook' },
+  { icon: FaInstagram, href: 'https://www.instagram.com/yeshiva.cochabamba?utm_source=ig_web_button_share_sheet&igsh=MmppNWFyczRyN3Vn', label: 'Instagram' },
+  { icon: FaTiktok, href: 'https://www.tiktok.com/@yeshiva.cochabamba?_t=ZM-8xdkhusjRGq&_r=1', label: 'TikTok' },
+  //{ icon: FaLinkedinIn, href: 'https://www.linkedin.com/feed/', label: 'Linkedin' },
 ];
 
 const CONTACTS = [
@@ -56,34 +56,20 @@ const CONTACTS = [
   }
 ];
 
-// const ADDRESS = {
-//   icon: FaMapMarkerAlt,
-//   label: 'Dirección',
-//   value: (
-//     <>
-//       Torres América Norte, planta baja, of. 2<br />
-//       Av. América entre Av. Pando y Av. M. Urquidi
-//     </>
-//   ),
-// };
-
 // --- Componente principal ---
 const Footer = () => (
-
-  <div className="relative w-full h-[300px] text-[#1B3863]">
-      
+  <div className="relative w-full text-[#1B3863]">      
       <Image
         src={bgFooter}
         alt="Footer Background" 
-        className="absolute object-fill w-full z-0"
-      />
-      
-      <div className="absolute inset-0  bg-opacity-60 z-10"></div>
-
-      
+        className="absolute object-cover h-full w-full z-0"
+      />      
+      <div className="absolute inset-0  bg-opacity-60 z-10"></div>      
       <div className='relative z-10'>
         <div className="max-w-7xl mx-auto px-6 py-12">
-          <h2 className="text-8xl font-bold text-center uppercase mb-6">Yeshiva</h2>
+          <h2 className="text-6xl sm:text-5xl md:text-8xl lg:text-8xl font-bold text-center uppercase mb-6 leading-tight">
+            Yeshiva
+          </h2>
           <p className="text-center text-3xl  uppercase">
             Instituto Tecnológico
           </p> 
@@ -142,10 +128,6 @@ const Footer = () => (
                   )}
                 </li>
               ))}
-              {/* <li className="flex items-start gap-3">
-                <ADDRESS.icon size={18} className="text-white mt-1" aria-hidden="true" />
-                <span>{ADDRESS.value}</span>
-              </li> */}
             </ul>
           </div>
         </div>
