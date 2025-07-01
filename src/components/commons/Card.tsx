@@ -6,6 +6,7 @@ import { GoArrowRight } from 'react-icons/go';
 interface CardProps {
   cardTitle: string;
   carDescription?: string;
+  rearFaceText?:string;
   cardImage?: StaticImageData | string;
   date?: string;
   variant: 'news' | 'otherNotices' | 'event' | 'beca' | 'newsmainpage';
@@ -59,6 +60,7 @@ const Card: FC<CardProps> = ({
   cardTitle,
   carDescription,
   cardImage,
+  rearFaceText,
   date,
   variant,
 }) => {
@@ -90,7 +92,7 @@ const Card: FC<CardProps> = ({
               className="object-cover brightness-50"
             />
           )}
-          <div className="absolute bottom-5 left-5 pr-9">
+          <div className="w-4/5 absolute bottom-5 left-5 pr-9">
             <div className={`font-bold text-white ${titleSize}`}>{cardTitle}</div>
             {showDescription && (
               <div className="text-white text-sm">
@@ -100,7 +102,7 @@ const Card: FC<CardProps> = ({
             )}
           </div>
           {showButton && (
-            <button className="absolute bottom-5 right-5 bg-yellow-500 rounded-full p-2 text-3xl">
+            <button className="w-1/5 absolute  bottom-5 right-3 bg-yellow-500 rounded-full p-2 text-3xl">
               <GoArrowRight />
             </button>
           )}
@@ -115,8 +117,8 @@ const Card: FC<CardProps> = ({
             {/* Ejemplo de info diferente */}
             {variant === "news" && (
               <>
-                <div className="mb-2 text-xl  font-bold ">{cardTitle}</div>
-                <div>{carDescription}</div>
+                <div className="mb-2 text-xl font-bold uppercase ">{cardTitle}</div>
+                <div className='italic'>{rearFaceText}</div>
               </>
             )}
             {variant === "event" && (
