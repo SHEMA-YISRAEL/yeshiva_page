@@ -2,6 +2,7 @@
 import React, { FC, useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { GoArrowRight } from 'react-icons/go';
+import Link from 'next/link';
 
 interface CardProps {
   cardTitle: string;
@@ -10,6 +11,7 @@ interface CardProps {
   cardImage?: StaticImageData | string;
   date?: string;
   variant: 'news' | 'otherNotices' | 'event' | 'beca' | 'newsmainpage' | "relatedCareer";
+  redirectPath:string
 }
 
 const variantStyles = {
@@ -72,6 +74,7 @@ const Card: FC<CardProps> = ({
   rearFaceText,
   date,
   variant,
+  redirectPath
 }) => {
   const {
     height,
@@ -144,9 +147,14 @@ const Card: FC<CardProps> = ({
             {/* Puedes personalizar para otros variants */}
           </div>
           {showButton && (
-            <button className="mt-3 px-4 py-2 rounded bg-yellow-400 text-[#1B3863] font-bold">
-              {variant === "beca" ? "Solicitar" : "Ver detalle"}
-            </button>
+            <Link href={redirectPath}>
+              <button 
+                className="cursor:pointer mt-3 px-4 py-2 rounded bg-yellow-400 text-[#1B3863] font-bold"
+                onClick={()=>(console.log(''))}
+                >
+                {variant === "beca" ? "Solicitar" : "Ver detalle"}
+              </button>
+            </Link>
           )}
         </div>
       </div>
