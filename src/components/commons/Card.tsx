@@ -6,9 +6,10 @@ import { GoArrowRight } from 'react-icons/go';
 interface CardProps {
   cardTitle: string;
   carDescription?: string;
+  rearFaceText?:string;
   cardImage?: StaticImageData | string;
   date?: string;
-  variant: 'news' | 'otherNotices' | 'event' | 'beca' | 'newsmainpage';
+  variant: 'news' | 'otherNotices' | 'event' | 'beca' | 'newsmainpage' | "relatedCareer";
 }
 
 const variantStyles = {
@@ -53,12 +54,22 @@ const variantStyles = {
     showButton: true,
     enableFlip: false,
   },
+  relatedCareer:{
+    height: 'h-75',
+    weight: 'w-full',
+    titleSize: 'text-xl',
+    showDescription: true,
+    showDate: false,
+    showButton: true,
+    enableFlip: false,
+  }
 };
 
 const Card: FC<CardProps> = ({
   cardTitle,
   carDescription,
   cardImage,
+  rearFaceText,
   date,
   variant,
 }) => {
@@ -75,7 +86,7 @@ const Card: FC<CardProps> = ({
 
   return (
     <div
-      className={`relative p-3 m-2 rounded-2xl overflow-hidden shadow-1xl ${height} perspective`}
+      className={`relative  rounded-2xl shadow-1xl ${height} ${variant==="relatedCareer"? "" : ""} perspective`}
       onMouseEnter={() => enableFlip && setFlipped(true)}
       onMouseLeave={() => enableFlip && setFlipped(false)}
     >
@@ -90,7 +101,7 @@ const Card: FC<CardProps> = ({
               className="object-cover brightness-50"
             />
           )}
-          <div className="absolute bottom-5 left-5 pr-9">
+          <div className="w-4/5 absolute bottom-5 left-5 pr-9">
             <div className={`font-bold text-white ${titleSize}`}>{cardTitle}</div>
             {showDescription && (
               <div className="text-white text-sm">
@@ -100,7 +111,7 @@ const Card: FC<CardProps> = ({
             )}
           </div>
           {showButton && (
-            <button className="absolute bottom-5 right-5 bg-yellow-500 rounded-full p-2 text-3xl">
+            <button className="absolute  bottom-5 right-6 bg-yellow-500 rounded-full p-2 text-3xl cursor-pointer">
               <GoArrowRight />
             </button>
           )}
@@ -115,8 +126,9 @@ const Card: FC<CardProps> = ({
             {/* Ejemplo de info diferente */}
             {variant === "news" && (
               <>
-                <div className="mb-2 text-xl font-bold ">{cardTitle}</div>
-                <div>{carDescription}</div>
+                <div className="mb-2 text-xl font-bold uppercase ">{cardTitle}</div>
+                <div className='italic'>{rearFaceText}</div>
+        
               </>
             )}
             {variant === "event" && (

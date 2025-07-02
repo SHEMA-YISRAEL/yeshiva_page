@@ -15,7 +15,7 @@ const navItems = [
   { name: 'Inicio', href: '/' },
   { name: 'Sobre Yeshiva', href: '/about' },
   { name: 'Oferta Académica', href: '/academic' },
-  //{ name: 'Noticias', href: '/notices' },
+  // { name: 'Noticias', href: '/notices' },
   { name: 'Información', href: '/info' },
 ];
 
@@ -39,7 +39,6 @@ export default function Navbar() {
             className="h-10 w-full"
           />
         </Link>
-+
         {/* Botón para abrir/cerrar menú móvil */}
         <button
           className="md:hidden text-[#1B3863] text-2xl"

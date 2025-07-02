@@ -12,7 +12,7 @@ interface SectionTitleProps {
 
 const SectionTitle: FC<SectionTitleProps> = ({ title='', size=5, linkTo }) => {
   const Heading = (
-    <h1 className={`${roboto.className} md:text-${size}xl text-slate-900 sm:text-${size}xl lg:text-${size}xl`}>
+    <h1 className={`${roboto.className} md:text-${size-2}xl text-slate-900 sm:text-${size}xl lg:text-${size}xl`}>
       {title}
     </h1>
   );

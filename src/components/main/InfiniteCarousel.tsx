@@ -10,20 +10,27 @@ import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 const baseCards = [
   {
+    description: 'Técnico Superior Urgencias y Emergencias en Salud',
     careerName: 'Técnico Medio Enfermería',
     image: imageEnfermeria,
+    rearFaceText: 'Prepárate para brindar atención integral a los pacientes, participando en la prevención, recuperación y rehabilitación.'
   },
   {
-    careerName: 'Técnico superior en emergencias y urgencias',
+    careerName: 'Laboratorio de Anatomía Patológica ',
+    description: 'Técnico Superior Laboratorio de Anatomía Patológica',
     image: imageUrgencias,
+    rearFaceText: 'Brinda atención pre hospitalaria y responde rápidamente en situaciones de emergencia'
   },
   {
     careerName: 'Técnico Superior Laboratorio de Anatomía Patológica',
+    description: 'Técnico Medio Enfermería',
     image: imageLaboratorio,
+    rearFaceText: 'Brinda atención pre hospitalaria y responde rápidamente en situaciones de emergencia'
   },
   {
     careerName: 'Técnico Medio Nutrición y Dietética',
     image: imageNutricion,
+    rearFaceText: 'Brinda apoyo en tratamientos nutricionales con buenos hábitos alimenticios. '
   },
 ];
 
@@ -128,6 +135,7 @@ export default function InfiniteCarousel() {
               <Card
                 cardTitle={card.careerName}
                 cardImage={card.image}
+                rearFaceText={card.rearFaceText}
                 variant='news'
               />
             </div>
