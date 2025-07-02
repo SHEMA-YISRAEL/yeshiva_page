@@ -78,7 +78,7 @@ export default async function Page( { params }: { params: Promise<{ slug: string
         />
       </div> */}
       
-      <Link href="/#oferta-academica">
+      <Link href="/academic">
         <div className="flex items-center text-slate-500 font-bold text-xl cursor-pointer mb-6 hover:text-slate-700 transition">
           <MdKeyboardDoubleArrowLeft className="mr-2" />
           Volver a la oferta académica
@@ -141,6 +141,7 @@ export default async function Page( { params }: { params: Promise<{ slug: string
                     carDescription={item.carDescription}
                     cardImage={item.cardImage}
                     variant='relatedCareer'
+                    redirectPath={item.redirectPath}
                   />
                 ))}
               </div>

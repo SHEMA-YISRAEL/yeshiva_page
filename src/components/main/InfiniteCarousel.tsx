@@ -13,24 +13,28 @@ const baseCards = [
     description: 'Técnico Superior Urgencias y Emergencias en Salud',
     careerName: 'Técnico Medio Enfermería',
     image: imageEnfermeria,
-    rearFaceText: 'Prepárate para brindar atención integral a los pacientes, participando en la prevención, recuperación y rehabilitación.'
+    rearFaceText: 'Prepárate para brindar atención integral a los pacientes, participando en la prevención, recuperación y rehabilitación.',
+    redirectPath: '/'
   },
   {
     careerName: 'Laboratorio de Anatomía Patológica ',
     description: 'Técnico Superior Laboratorio de Anatomía Patológica',
     image: imageUrgencias,
-    rearFaceText: 'Brinda atención pre hospitalaria y responde rápidamente en situaciones de emergencia'
+    rearFaceText: 'Brinda atención pre hospitalaria y responde rápidamente en situaciones de emergencia',
+    redirectPath: '/'
   },
   {
     careerName: 'Técnico Superior Laboratorio de Anatomía Patológica',
     description: 'Técnico Medio Enfermería',
     image: imageLaboratorio,
-    rearFaceText: 'Brinda atención pre hospitalaria y responde rápidamente en situaciones de emergencia'
+    rearFaceText: 'Brinda atención pre hospitalaria y responde rápidamente en situaciones de emergencia',
+    redirectPath: '/'
   },
   {
     careerName: 'Técnico Medio Nutrición y Dietética',
     image: imageNutricion,
-    rearFaceText: 'Brinda apoyo en tratamientos nutricionales con buenos hábitos alimenticios. '
+    rearFaceText: 'Brinda apoyo en tratamientos nutricionales con buenos hábitos alimenticios.',
+    redirectPath: '/'
   },
 ];
 
@@ -130,13 +134,14 @@ export default function InfiniteCarousel() {
               style={{
                 width: `${100 / cards.length}%`,
               }}
-              className="flex-shrink-0 px-0"
+              className="flex-shrink-0 px-0 md:px-5 sm:px-4"
             >
               <Card
                 cardTitle={card.careerName}
                 cardImage={card.image}
                 rearFaceText={card.rearFaceText}
                 variant='news'
+                redirectPath={card.redirectPath}
               />
             </div>
           ))}

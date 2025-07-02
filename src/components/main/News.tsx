@@ -3,6 +3,7 @@ import Card from "../commons/Card";
 import { GoArrowRight } from "react-icons/go";
 import imageDoctor from '../../../public/img/medico.jpg';
 import Link from 'next/link';
+import { redirect } from "next/dist/server/api-utils";
 
 
 const newsData = [
@@ -10,31 +11,38 @@ const newsData = [
     title: 'Nuevo convenio con hospital regional',
     description: 'El instituto firmó un acuerdo con el hospital regional para prácticas profesionales.',
     image: imageDoctor,
+    redirectPath: "/"
+    
   },
   {
     title: "Nueva técnica reduce errores en medicación",
     description: "Un protocolo innovador disminuye en 30% los errores en enfermería.",
     image: imageDoctor,
+    redirectPath: "/"
   },
   {
     title: "Urgencias colapsadas por aumento de pacientes",
     description: "Hospitales reportan esperas de hasta 12 horas por saturación.",
     image: imageDoctor,
+    redirectPath: "/"
   },
   {
     title: "Descubren biomarcador para cáncer de páncreastulo",
     description: "Nueva proteína mejora la detección temprana de este cáncer.",
     image: imageDoctor,
+    redirectPath: "/"
   },
   {
     title: "Aumentan enfermedades renales en el mundo",
     description: "Expertos alertan que 10% de la población sufre daño renal.",
     image: imageDoctor,
+    redirectPath: "/"
   },
   {
     title: "Realidad virtual revoluciona anatomía patológica",
     description: "Simuladores 3D mejoran el estudio de tejidos y diagnósticos.",
     image: imageDoctor,
+    redirectPath: "/"
   },
 ];
 
@@ -60,6 +68,7 @@ const News = () => {
               carDescription={news.description}
               cardImage={news.image}
               variant="newsmainpage"
+              redirectPath={news.redirectPath}
             />
           </div>
         ))}

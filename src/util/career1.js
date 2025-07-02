@@ -9,7 +9,8 @@ const careerData = {
     system: "Anual sistema modular",
     label: "EMERGENCIAS Y URGENCIAS MÉDICAS",
     schedules: ["Mañana", "Tarde", "Noche"],  
-    curriculum: '/pdfs/malla-emergencias.pdf', //TODO: change to drive 
+    curriculum: '/pdfs/malla-emergencias.pdf', //TODO: change to drive
+    redirectPath: '/1'
 }
 
 const whyStudyThis = [
@@ -73,6 +74,7 @@ const carreras = [
     cardTitle: 'Enfermería',
     carDescription: 'Formación profesional con prácticas clínicas en hospitales.',
     cardImage: oferta1,
+    redirectPath: '/'
   },
   
 ];
