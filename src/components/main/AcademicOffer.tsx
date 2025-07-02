@@ -7,7 +7,7 @@ const AcademicOffer = () => {
   const academicOffer = ['Carreras'];
 
   return (
-    <div className="px-4 sm:px-6 lg:px-8">
+    <div className="px-3 sm:px-3 lg:px-5">
       <SectionTitle size={2} title="OFERTA ACADÉMICA" linkTo="/academic" />
 
       <div className="mt-8 mb-6 space-y-4 sm:space-y-0 sm:flex sm:flex-wrap sm:items-center sm:gap-6">

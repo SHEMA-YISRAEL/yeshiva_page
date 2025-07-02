@@ -10,8 +10,8 @@ import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 const baseCards = [
   {
-    careerName: 'Enfermería',
     description: 'Técnico Superior Urgencias y Emergencias en Salud',
+    careerName: 'Técnico Medio Enfermería',
     image: imageEnfermeria,
     rearFaceText: 'Prepárate para brindar atención integral a los pacientes, participando en la prevención, recuperación y rehabilitación.'
   },
@@ -22,14 +22,13 @@ const baseCards = [
     rearFaceText: 'Brinda atención pre hospitalaria y responde rápidamente en situaciones de emergencia'
   },
   {
-    careerName: 'Terapia Física',
+    careerName: 'Técnico Superior Laboratorio de Anatomía Patológica',
     description: 'Técnico Medio Enfermería',
     image: imageLaboratorio,
     rearFaceText: 'Brinda atención pre hospitalaria y responde rápidamente en situaciones de emergencia'
   },
   {
-    careerName: 'Nutrición y Diétetica',
-    description: 'Técnico superior en nutrición y dietética',
+    careerName: 'Técnico Medio Nutrición y Dietética',
     image: imageNutricion,
     rearFaceText: 'Brinda apoyo en tratamientos nutricionales con buenos hábitos alimenticios. '
   },
@@ -131,11 +130,10 @@ export default function InfiniteCarousel() {
               style={{
                 width: `${100 / cards.length}%`,
               }}
-              className="flex-shrink-0 px-2"
+              className="flex-shrink-0 px-0"
             >
               <Card
                 cardTitle={card.careerName}
-                carDescription={card.description}
                 cardImage={card.image}
                 rearFaceText={card.rearFaceText}
                 variant='news'
