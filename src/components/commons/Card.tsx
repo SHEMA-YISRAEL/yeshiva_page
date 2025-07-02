@@ -9,7 +9,7 @@ interface CardProps {
   rearFaceText?:string;
   cardImage?: StaticImageData | string;
   date?: string;
-  variant: 'news' | 'otherNotices' | 'event' | 'beca' | 'newsmainpage';
+  variant: 'news' | 'otherNotices' | 'event' | 'beca' | 'newsmainpage' | "relatedCareer";
 }
 
 const variantStyles = {
@@ -54,6 +54,15 @@ const variantStyles = {
     showButton: true,
     enableFlip: false,
   },
+  relatedCareer:{
+    height: 'h-75',
+    weight: 'w-full',
+    titleSize: 'text-xl',
+    showDescription: true,
+    showDate: false,
+    showButton: true,
+    enableFlip: false,
+  }
 };
 
 const Card: FC<CardProps> = ({
@@ -77,7 +86,7 @@ const Card: FC<CardProps> = ({
 
   return (
     <div
-      className={`relative p-3 m-2 rounded-2xl overflow-hidden shadow-1xl ${height} perspective`}
+      className={`relative  rounded-2xl shadow-1xl ${height} ${variant==="relatedCareer"? "" : ""} perspective`}
       onMouseEnter={() => enableFlip && setFlipped(true)}
       onMouseLeave={() => enableFlip && setFlipped(false)}
     >
@@ -102,7 +111,7 @@ const Card: FC<CardProps> = ({
             )}
           </div>
           {showButton && (
-            <button className="w-1/5 absolute  bottom-5 right-3 bg-yellow-500 rounded-full p-2 text-3xl">
+            <button className="absolute  bottom-5 right-6 bg-yellow-500 rounded-full p-2 text-3xl cursor-pointer">
               <GoArrowRight />
             </button>
           )}

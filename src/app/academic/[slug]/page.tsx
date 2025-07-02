@@ -30,21 +30,28 @@ const CareerInfoComponent:React.FC<CareerType> = ( careerData ) => {
   );
 }
 
-const StatisticComponent:React.FC<StatisticComponentType> = ({data}) => {
+interface StatisticComponentInterface{
+  data: StatisticType[]
+  className?:string
+}
+
+const StatisticComponent:React.FC<StatisticComponentInterface> = ({className, data}) => {
   return(
-    <div>
-      <h2 className="text-xl font-bold text-gray-800 mb-4">Estadísticas de interés</h2>
-      <div className={`bg-neutral-100 p-6 rounded-2xl space-y-6 ${robotoSerif.className}`}>
-        {data.map((stat: StatisticType, i:number) => (
-          <div key={i} className="relative pl-6">
-            <div className="absolute left-0 top-2 w-3 h-3 bg-neutral-400 rounded-full" />
-            <div>
-              <p className="font-bold">{stat.title}</p>
-              <p>{stat.value}</p>
-              {stat.source && <p className="text-sm text-gray-500">{stat.source}</p>}
+    <div className={`${className}`}>
+      <h2 className="text-xl font-bold text-gray-800 pb-4">Estadísticas de interés</h2>
+      <div className="flex">
+        <div className={`bg-neutral-100 p-6 rounded-2xl space-y-6 ${robotoSerif.className}`}>
+          {data.map((stat: StatisticType, i:number) => (
+            <div key={i} className="relative pl-6">
+              <div className="absolute left-0 top-2 w-3 h-3 bg-neutral-400 rounded-full" />
+              <div>
+                <p className="font-bold">{stat.title}</p>
+                <p>{stat.value}</p>
+                {stat.source && <p className="text-sm text-gray-500">{stat.source}</p>}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   )
@@ -61,7 +68,7 @@ export default async function Page( { params }: { params: Promise<{ slug: string
   const data = await getCareerData(careerID)
 
   return (      
-    <>
+    <div className="max-w-7xl mx-auto  px-10 lg:px-4 py-10 md:px-20 sm:px-10">
       {/* Imagen de portada */}
       {/* <div className="relative w-full h-[40vh] md:h-[50vh]">
         <Image
@@ -70,21 +77,21 @@ export default async function Page( { params }: { params: Promise<{ slug: string
           src={paramedic}
         />
       </div> */}
+      
+      <Link href="/#oferta-academica">
+        <div className="flex items-center text-slate-500 font-bold text-xl cursor-pointer mb-6 hover:text-slate-700 transition">
+          <MdKeyboardDoubleArrowLeft className="mr-2" />
+          Volver a la oferta académica
+        </div>
+      </Link>
 
       {/* Contenido principal en 2 columnas */}
-      <div className="max-w-7xl mx-auto px-4 py-10 flex flex-col lg:flex-row gap-10">
-        
+      <div className=" flex flex-col lg:flex-row gap-10 ">  
         {/* Columna izquierda */}
         <div className="lg:w-2/3">
-          <Link href="/#oferta-academica">
-            <div className="flex items-center text-slate-500 font-bold text-xl cursor-pointer mb-6 hover:text-slate-700 transition">
-              <MdKeyboardDoubleArrowLeft className="mr-2" />
-              Volver a la oferta académica
-            </div>
-          </Link>
+
           {/* Info general */}
           <SectionTitle title={data.careerData.label} size={5} />
-
           <CareerInfoComponent 
             area={data.careerData.area} 
             level={data.careerData.level} 
@@ -122,27 +129,27 @@ export default async function Page( { params }: { params: Promise<{ slug: string
         {/* Columna derecha */}
         <div className="lg:w-1/3 space-y-10">
           {/* Carreras relacionadas */}
-          <div>
-            <h2 className="text-xl font-bold text-gray-800 mb-4">Carreras relacionadas</h2>
-            {/* Aquí puedes mapear otras carreras si las tienes */}
-            <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mt-4">
-              {data.carreras.map((item:any, index:number) => (
-                <Card
-                  key={index}
-                  cardTitle={item.cardTitle}
-                  carDescription={item.carDescription}
-                  cardImage={item.cardImage}
-                  variant='beca'
-                />
-              ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+            <div className="py-5 md:px-5 sm:py-5">
+              <h2 className="text-xl font-bold text-gray-800 pb-4">Carreras relacionadas</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
+                {data.carreras.map((item:any, index:number) => (
+                  <Card
+                    key={index}
+                    cardTitle={item.cardTitle}
+                    carDescription={item.carDescription}
+                    cardImage={item.cardImage}
+                    variant='relatedCareer'
+                  />
+                ))}
+              </div>
             </div>
+            {/* Estadísticas */}
+            <StatisticComponent className="md:p-5 " data={data.statistics}/>
           </div>
-
-          {/* Estadísticas */}
-          <StatisticComponent data={data.statistics}/>
-          
         </div>
       </div>
-    </>
+    </div>
   );
 }

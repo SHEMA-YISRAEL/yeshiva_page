@@ -22,7 +22,7 @@ export default function RootLayout({
       <body
         className={`
           relative min-h-screen antialiased
-          bg-neutral-200
+        
           ${roboto.variable} ${geistMono.variable} ${robotoSerif.variable}
         `}
       >
