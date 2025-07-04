@@ -11,31 +11,32 @@ import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 const baseCards = [
   {
     description: 'Técnico Superior Urgencias y Emergencias en Salud',
-    careerName: 'Técnico Medio Enfermería',
-    image: imageEnfermeria,
+    careerName: 'Urgencias y Emergencias en Salud',
+    image:  imageUrgencias,
     rearFaceText: 'Prepárate para brindar atención integral a los pacientes, participando en la prevención, recuperación y rehabilitación.',
-    redirectPath: '/'
-  },
-  {
-    careerName: 'Laboratorio de Anatomía Patológica ',
-    description: 'Técnico Superior Laboratorio de Anatomía Patológica',
-    image: imageUrgencias,
-    rearFaceText: 'Brinda atención pre hospitalaria y responde rápidamente en situaciones de emergencia',
-    redirectPath: '/'
+    redirectPath: '/academic/1'
   },
   {
     careerName: 'Técnico Superior Laboratorio de Anatomía Patológica',
-    description: 'Técnico Medio Enfermería',
+    description: 'Laboratorio de Anatomía Patológica',
     image: imageLaboratorio,
     rearFaceText: 'Brinda atención pre hospitalaria y responde rápidamente en situaciones de emergencia',
-    redirectPath: '/'
+    redirectPath: '/academic/2'
   },
   {
     careerName: 'Técnico Medio Nutrición y Dietética',
     image: imageNutricion,
     rearFaceText: 'Brinda apoyo en tratamientos nutricionales con buenos hábitos alimenticios.',
-    redirectPath: '/'
+    redirectPath: '/academic/3'
   },
+  {
+    careerName: 'Técnico Medio en Enfermería',
+    description: 'Enfermería',
+    image: imageEnfermeria,
+    rearFaceText: 'Brinda atención pre hospitalaria y responde rápidamente en situaciones de emergencia',
+    redirectPath: '/academic/4'
+  },
+  
 ];
 
 export default function InfiniteCarousel() {
