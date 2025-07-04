@@ -9,7 +9,6 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
-  FaLinkedinIn,
   FaInstagram
 } from 'react-icons/fa';
 

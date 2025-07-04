@@ -1,5 +1,5 @@
 "use client";
-// import { useEffect } from "react";
+
 import SectionTitle from '@/components/commons/SectionTitle';
 import Card from '@/components/commons/Card';
 

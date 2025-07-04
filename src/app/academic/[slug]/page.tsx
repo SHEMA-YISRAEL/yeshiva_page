@@ -6,7 +6,7 @@ import Card from '@/components/commons/Card';
 // import oferta1 from '../../../../public/academicOffers/academic.png';
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import Link from "next/link";
-import { CareerType, StatisticType, StatisticComponentType } from "@/types/career";
+import { CareerType, StatisticType } from "@/types/career";
 import { robotoSerif } from "@/app/services/fonts";
 
 export function generateStaticParams() {
