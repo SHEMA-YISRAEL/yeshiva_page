@@ -183,6 +183,7 @@ export default async function Page(
                   carDescription={''}
                   cardImage={el.evenImage}
                   variant="event"
+                  redirectPath=""
                 />
               ))}
             </div>

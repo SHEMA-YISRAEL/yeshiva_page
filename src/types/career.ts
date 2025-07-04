@@ -1,4 +1,4 @@
-
+import { StaticImageData } from 'next/image';
 export type CareerType = {
   area:string,
   level:string,
@@ -18,4 +18,16 @@ export type StatisticType = {
 
 export type StatisticComponentType ={
   data:StatisticType[]
+}
+
+export type WorkAreaType = {
+  title:string,
+  description:string
+}
+
+export type RelatedCareerType = {
+  cardTitle: string,
+  carDescription: string,
+  cardImage: StaticImageData | string
+  redirectPath: string
 }

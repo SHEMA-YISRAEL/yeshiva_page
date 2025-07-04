@@ -3,7 +3,7 @@ import Card from "../commons/Card";
 import { GoArrowRight } from "react-icons/go";
 import imageDoctor from '../../../public/img/medico.jpg';
 import Link from 'next/link';
-import { redirect } from "next/dist/server/api-utils";
+
 
 
 const newsData = [

@@ -66,6 +66,7 @@ const EventosPage = () => {
               cardImage={evento.cardImage}
               date='09/05/2025'
               variant='event'
+              redirectPath=''
             />
           ))}
         </div>

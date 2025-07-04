@@ -6,7 +6,7 @@ import Card from '@/components/commons/Card';
 // import oferta1 from '../../../../public/academicOffers/academic.png';
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import Link from "next/link";
-import { CareerType, StatisticType } from "@/types/career";
+import { CareerType, StatisticType, WorkAreaType, RelatedCareerType} from "@/types/career";
 import { robotoSerif } from "@/app/services/fonts";
 
 export function generateStaticParams() {
@@ -117,7 +117,7 @@ export default async function Page( { params }: { params: Promise<{ slug: string
           <div className="mt-10">
             <SectionTitle title="ÁREA DE TRABAJO" size={5} />
             <ul className={`list-disc list-inside mt-4 space-y-4 text-gray-800 ${robotoSerif.className}`}>
-              {data.workArea.map((item:any, i:number) => (
+              {data.workArea.map((item:WorkAreaType, i:number) => (
                 <li key={i}>
                   <span className="font-bold">{item.title}:</span> {item.description}
                 </li>
@@ -134,7 +134,7 @@ export default async function Page( { params }: { params: Promise<{ slug: string
               <h2 className="text-xl font-bold text-gray-800 pb-4">Carreras relacionadas</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
-                {data.carreras.map((item:any, index:number) => (
+                {data.carreras.map((item:RelatedCareerType, index:number) => (
                   <Card
                     key={index}
                     cardTitle={item.cardTitle}
