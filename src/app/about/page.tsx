@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import SectionTitle from '@/components/commons/SectionTitle';
 import Image from "next/image";
-import historyImage from '../../../public/img/historyImage.png';
+// import historyImage from '../../../public/img/historyImage.png';
 import instituto from '../../../public/insti.jpg'
 import AOS from "aos";
 import "aos/dist/aos.css";

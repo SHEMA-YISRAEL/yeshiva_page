@@ -4,7 +4,7 @@ import eventBanner from '../../../../public/img/eventBanner.png';
 import Card from "@/components/commons/Card";
 import eventPicture from '../../../../public/img/eventPicture.jpg';
 
-import imageInfo from '../../../../public/eventBg.svg'; // por ejemplo
+import imageInfo from '../../../../public/eventBg.png'; 
 
 
 export function generateStaticParams() {
