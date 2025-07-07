@@ -8,7 +8,7 @@ import { useState } from 'react';
 import yeshivaLogo from '../../public/img/yeshivaLogoColor.svg'; 
 
 import Header from './main/Header';
-import imageStudent from '../../public/medical student studying 1.png';
+import imageStudent from '../../public/student_portait.png';
 import studentsGroup from '../../public/students.png';
 import bgNavbar from '../../public/papelBg.svg';
 
