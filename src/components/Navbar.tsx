@@ -8,7 +8,8 @@ import { useState } from 'react';
 import yeshivaLogo from '../../public/img/yeshivaLogoColor.svg'; 
 
 import Header from './main/Header';
-import imageStudent from '../../public/medical student studying 1.svg';
+import imageStudent from '../../public/medical student studying 1.png';
+import studentsGroup from '../../public/students.png';
 import bgNavbar from '../../public/papelBg.svg';
 
 const navItems = [
@@ -92,7 +93,7 @@ export default function Navbar() {
         </ul>
       </div>
     <Header
-        overlayImage={imageStudent}
+        overlayImage={ pathname === '/academic'? studentsGroup :imageStudent }
         overlayAlt="Estudiante repasando"
       />  
     </nav>

@@ -7,7 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-import { geistMono, roboto, robotoSerif } from "@/app/services/fonts";
+import { geistMono, roboto, robotoSerif } from "@/util/fonts";
 
 export const metadata: Metadata = {
   title: "Yeshiva - Shema Yisrael",

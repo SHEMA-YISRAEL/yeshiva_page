@@ -9,7 +9,7 @@ const careerData = {
     system: "Anual sistema modular",
     label: "ENFERMERÍA",
     schedules: ["Mañana", "Tarde", "Noche"],  
-    curriculum: '/pdfs/malla-emergencias.pdf', //TODO: change to drive 
+    curriculum: 'https://drive.google.com/file/d/1sG9duDPIh5oKiaNHDI7nzLrDVvmNMySd/view?usp=sharing', 
 }
 
 const whyStudyThis = [

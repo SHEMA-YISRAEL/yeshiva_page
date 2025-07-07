@@ -9,7 +9,7 @@ const careerData = {
     system: "Anual sistema modular",
     label: "LABORATORIO DE ANATOMIA PATOLÓGICA",
     schedules: ["Mañana", "Tarde", "Noche"],  
-    curriculum: '/pdfs/malla-emergencias.pdf', //TODO: change to drive 
+    curriculum: 'https://drive.google.com/file/d/18TEnOJFRvn0a9qKAL5PvZchM1SFzypG_/view?usp=sharing',
 }
 
 const whyStudyThis = [

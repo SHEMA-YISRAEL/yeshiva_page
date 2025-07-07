@@ -16,6 +16,7 @@ module.exports = {
         sans: ["var(--font-opensans)"],
         mono: ["var(--font-roboto-mono)"],
         robotoSerif: ["var(--font-roboto-serif)"],
+        roboto: ["var(--font-roboto)"]
       },
     },
   },

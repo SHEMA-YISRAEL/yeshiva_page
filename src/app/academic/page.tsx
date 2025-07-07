@@ -9,7 +9,7 @@ import imageNutricion from '../../../public/nutricion.png';
 import imageEnfermeria from '../../../public/enfermeria.png';
 
 import oferta1 from '../../../public/academicOffers/academic.png';
-import { robotoSerif } from "../services/fonts";
+import { robotoSerif } from "../../util/fonts";
 
 import "aos/dist/aos.css";
 

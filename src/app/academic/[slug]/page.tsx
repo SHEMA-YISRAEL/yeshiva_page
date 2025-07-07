@@ -7,7 +7,7 @@ import Card from '@/components/commons/Card';
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import Link from "next/link";
 import { CareerType, StatisticType, WorkAreaType, RelatedCareerType} from "@/types/career";
-import { robotoSerif } from "@/app/services/fonts";
+import { robotoSerif } from "@/util/fonts";
 
 export function generateStaticParams() {
   return [{ slug: '1' }, { slug: '2' }, { slug: '3' }, { slug: '4' }]
@@ -24,7 +24,7 @@ const CareerInfoComponent:React.FC<CareerType> = ( careerData ) => {
       <p><span className="font-bold">Título profesional:</span> {careerData.titleLabel}</p>
       <p>
         <span className="font-bold">Malla curricular:</span>{' '}
-        <a href={careerData.curriculum} target="_blank" className=" underline text-[#4ECDC4] font-bold"> PDF </a>
+        <Link href={careerData.curriculum} target="_blank" className=" underline text-[#4ECDC4] font-bold"> PDF </Link>
       </p>
     </div>
   );

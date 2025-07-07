@@ -9,7 +9,7 @@ const careerData = {
     system: "Anual sistema modular",
     label: "NUTRICIÓN Y DIETÉTICA",
     schedules: ["Mañana", "Tarde", "Noche"],  
-    curriculum: '/pdfs/malla-emergencias.pdf', //TODO: change to drive 
+    curriculum: 'https://drive.google.com/file/d/12bY0LM35i37zrBQdWaQ_mJI-bv8zhUad/view?usp=sharing',
 }
 
 const whyStudyThis = [

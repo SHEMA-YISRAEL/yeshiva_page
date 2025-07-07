@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import SectionTitle from '@/components/commons/SectionTitle';
 import Image from "next/image";
 import historyImage from '../../../public/img/historyImage.png';
+import instituto from '../../../public/insti.jpg'
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -13,7 +14,7 @@ import valueIntegrity from '../../../public/img/values/integridad.png';
 import valueExcelence from '../../../public/img/values/excelencia.png';
 
 import pastor from '../../../public/img/pastor.png';
-import { robotoSerif } from '@/app/services/fonts';
+import { robotoSerif } from '@/util/fonts';
 
 const sizeTitle = 5
 const paragraphsHistory= [
@@ -105,10 +106,10 @@ const History = () => {
         <div className="flex justify-center" >
           <Image
             alt="Portada"
-            src={historyImage}
+            src={instituto}
             // fill
             // data-aos="fade-in"
-            className="object-cover h-3/4 mt-10 brightness-50 rounded-4xl"
+            className="object-cover h-3/4 mt-10 brightness-90 rounded-4xl"
           />
         </div>
       </div>  

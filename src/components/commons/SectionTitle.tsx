@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import React, { FC } from 'react';
 
-import {roboto } from '@/app/services/fonts';
+import {roboto } from '@/util/fonts';
 interface SectionTitleProps {
   title: string;
   size: number;

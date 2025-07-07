@@ -9,7 +9,7 @@ const careerData = {
     system: "Anual sistema modular",
     label: "EMERGENCIAS Y URGENCIAS MÉDICAS",
     schedules: ["Mañana", "Tarde", "Noche"],  
-    curriculum: '/pdfs/malla-emergencias.pdf', //TODO: change to drive
+    curriculum: 'https://drive.google.com/file/d/1eMb4QaN1Vv0UeNIJuaMoY7DJhjLxwxjZ/view?usp=sharing',
     redirectPath: '/1'
 }
 
