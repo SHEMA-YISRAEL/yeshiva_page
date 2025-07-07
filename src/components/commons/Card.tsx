@@ -149,7 +149,7 @@ const Card: FC<CardProps> = ({
           {showButton && (
             <Link href={redirectPath}>
               <button 
-                className="cursor:pointer mt-3 px-4 py-2 rounded bg-yellow-400 text-[#1B3863] font-bold"
+                className="cursor-pointer mt-3 px-4 py-2 rounded bg-yellow-400 text-[#1B3863] font-bold"
                 onClick={()=>(console.log(''))}
                 >
                 {variant === "beca" ? "Solicitar" : "Ver detalle"}
