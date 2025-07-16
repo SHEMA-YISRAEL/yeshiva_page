@@ -93,7 +93,7 @@ export default function Navbar() {
         </ul>
       </div>
     <Header
-        overlayImage={ pathname === '/academic'? studentsGroup :imageStudent }
+        overlayImage={studentsGroup}
         overlayAlt="Estudiante repasando"
       />  
     </nav>
