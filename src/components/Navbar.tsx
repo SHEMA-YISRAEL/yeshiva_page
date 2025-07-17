@@ -25,7 +25,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="shadow-md relative -z-0">
+    <nav className="shadow-md relative">
       <Image
         src={bgNavbar}
         alt="Footer Background" 
@@ -67,9 +67,9 @@ export default function Navbar() {
 
       {/* Menú móvil deslizante desde la derecha */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-[#1B3863] text-white transform transition-transform duration-300 ease-in-out ${
-          menuOpen ? 'translate-x-0' : 'translate-x-full'
-        } md:hidden shadow-lg z-50`}
+        className={`fixed top-0 right-0 z-50 h-full w-64 bg-[#1B3863] text-white  duration-300 ease-in-out ${
+          menuOpen ? 'translate-x-0 mb-500' : 'translate-x-full'
+        } md:hidden shadow-lg`}
       >
         <div className="flex justify-end p-4">
           <button onClick={() => setMenuOpen(false)} className="text-2xl">
