@@ -18,8 +18,8 @@ const SectionTitle: FC<SectionTitleProps> = ({ title='', size=5, linkTo }) => {
   );
 
   return (
-    <div>
-      <div className="relative inline-block">
+    <div className='z-10'>
+      <div className="relative  inline-block">
         {linkTo ? (
           <Link href={linkTo} className="group transition-colors duration-200">
             {Heading}
