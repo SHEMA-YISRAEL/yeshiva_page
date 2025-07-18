@@ -5,7 +5,7 @@ import articleImage from "../../../../public/img/artNotice.png";
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import Link from "next/link";
 
-//import imageArtNotice from '../../../../public/artNoticeBg.svg'
+import imageArtNotice from '../../../../public/artNoticeBg.svg'
 
 export function generateStaticParams() {
   return [{ slug: '1' }, { slug : '2' }, { slug: '3' }]
