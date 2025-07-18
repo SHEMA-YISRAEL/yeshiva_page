@@ -34,9 +34,8 @@ const Header = ({
       {/* Overlay (imagen decorativa derecha) */}
       <div className="absolute right-0 bottom-0 top-0 h-full w-full flex items-center justify-end z-20 pointer-events-none">
         <div
-          className="relative h-full w-full max-w-[65vw] max-h-[50vw] xl:max-w-[55vw] xl:max-h-[45vw] mt-auto"
-          data-aos="zoom-out"
-          data-aos-duration="1800"
+          className="relative h-full w-full max-w-[75vw] max-h-[46vw] xl:max-w-[55vw] xl:max-h-[45vw] mt-auto ml-auto"
+
         >
           <Image
             src={overlayImage}
@@ -51,15 +50,15 @@ const Header = ({
 
       {/* Mensaje a la izquierda */}
       <div className="relative z-30 h-full flex items-center md:items-end">
-        <div className="px-4 ml-5 sm:px-8 md:pl-12 pb-10 md:pb-16 lg:ml-84 max-w-xl w-full md:mb-70">
-          <h1 className="text-2xl md:text-6xl lg:text-8xl font-extrabold text-[#204378] tracking-tight uppercase leading-none drop-shadow-sm">
+        <div className="px-4 ml-5 sm:px-8 md:pl-10 pb-10 md:pb-16 2xl:ml-70 max-w-xl w-full md:mb-70 ">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl xl:text-8xl font-extrabold text-[#204378] tracking-tight uppercase leading-none drop-shadow-sm">
             EDUCACIÓN
           </h1>
           <div className="relative h-[2.4em] mt-2">
             <AnimatePresence mode="wait">
               <motion.h2
                 key={phrases[index]}
-                className="absolute left-0 top-0 w-full text-xs md:text-3xl lg:text-5xl font-semibold text-white tracking-widest uppercase"
+                className="absolute left-0 top-0 w-full text-xs md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-white tracking-widest uppercase"
                 initial={{ opacity: 0, y: 36 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 36 }}
