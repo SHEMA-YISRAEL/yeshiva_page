@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import bgFooter from '../../public/bg-footer.svg';
+import logoFooter from '../../public/footer/logoFooter.png'
 
 import {
   FaFacebookF,
@@ -65,13 +66,19 @@ const Footer = () => (
       />      
       <div className="absolute inset-0  bg-opacity-60 z-10"></div>      
       <div className='relative z-10'>
-        <div className="max-w-7xl mx-auto px-6 py-12">
-          <h2 className="text-6xl sm:text-5xl md:text-8xl lg:text-8xl font-bold text-center uppercase mb-6 leading-tight">
+        <div className="flex justify-center">
+          <Image
+            src={logoFooter}
+            alt='Logo Yeshiva'
+            // width={100}
+            className='w-2/3 sm:w-2/3 md:w-1/3'
+          />
+          {/* <h2 className="text-6xl sm:text-5xl md:text-8xl lg:text-8xl font-bold text-center uppercase mb-6 leading-tight">
             Yeshiva
           </h2>
           <p className="text-center text-3xl  uppercase">
             Instituto Tecnológico
-          </p> 
+          </p>  */}
         </div>
         <hr className="border-gray-600 w-[90%] mx-auto my-6" />
         <div className="text-[#1B3863] max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-12">
