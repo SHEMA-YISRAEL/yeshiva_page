@@ -124,29 +124,25 @@ const Values = () => {
   return (
     <section className="mb-10" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">
       <SectionTitle size={sizeTitle} title="VALORES" />
-      <div className="flex justify-center mt-8 mx-10 sm:mx5">
-        {values.map((value, index) => (
-          <div
-            key={index}
-            //data-aos="zoom-in"
-            // data-aos-delay={100 * index}
-            // data-aos-duration="800"
-            className="flex-1 transform transition duration-300 ease-out hover:scale-120 hover:animate-bounce-smooth"
-            // 
-          >
-            <Image
-              src={value.img}
-              alt={value.name}
+      <div className="relative left-20 my-5 md:my-15 sm:my-5">
+        <div 
+          className="flex justify-center mt-8"
+        >
+          {
+            values.map((element, index)=>{
               
-              height={120}
-              // height={100}
-              // width={100}
-              className="object-contain w-full"
-            />
-            {/* <h3 className="text-lg font-semibold text-blue-900">{value.name}</h3>
-            <p className="px-2">{value.desc}</p> */}
-          </div>
-        ))}
+              return <Image
+                key={index}
+                src={element.img}
+                alt={element.name}
+                className={`object-contain relative w-32 md:w-50 right-${index*10} sm:w-30`}
+                data-aos="zoom-in"
+                data-aos-delay={400 * index}
+                data-aos-duration="500"
+              />    
+            })
+          }
+        </div>
       </div>
     </section>
   );
