@@ -21,13 +21,11 @@ const whyStudyThis = [
 const workArea = [
   {
     title: "Centros de salud públicos y privados",
-    description:
-      "Trabajan en equipos de paramédicos en ambulancias, respondiendo a emergencias médicas en el lugar del incidente y transportando a los pacientes a hospitales.",
+    // description: "Trabajan en equipos de paramédicos en ambulancias, respondiendo a emergencias médicas en el lugar del incidente y transportando a los pacientes a hospitales.",
   },
   {
     title: "Hospitales y clínicas",
-    description:
-      "Apoyan en las áreas de urgencias, brindando primeros auxilios y asistencia a pacientes en situaciones críticas bajo la supervisión de médicos.",
+    // description: "Apoyan en las áreas de urgencias, brindando primeros auxilios y asistencia a pacientes en situaciones críticas bajo la supervisión de médicos.",
   },
 ];
 

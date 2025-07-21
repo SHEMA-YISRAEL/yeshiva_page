@@ -119,7 +119,8 @@ export default async function Page( { params }: { params: Promise<{ slug: string
             <ul className={`list-disc list-inside mt-4 space-y-4 text-gray-800 ${robotoSerif.className}`}>
               {data.workArea.map((item:WorkAreaType, i:number) => (
                 <li key={i}>
-                  <span className="font-bold">{item.title}:</span> {item.description}
+                  <span className="font-bold">{item.title}</span>
+                   {/* {item.description} */}
                 </li>
               ))}
             </ul>

@@ -20,23 +20,19 @@ const whyStudyThis = [
 const workArea = [
   {
     title: "Hospitales y clínicas (públicas y privadas)",
-    description:
-      "Trabajan en equipos de paramédicos en ambulancias, respondiendo a emergencias médicas en el lugar del incidente y transportando a los pacientes a hospitales.",
+    // description: "Trabajan en equipos de paramédicos en ambulancias, respondiendo a emergencias médicas en el lugar del incidente y transportando a los pacientes a hospitales.",
   },
   {
     title: "Centros de salud y postas",
-    description:
-      "Apoyan en las áreas de urgencias, brindando primeros auxilios y asistencia a pacientes en situaciones críticas bajo la supervisión de médicos.",
+    // description: "Apoyan en las áreas de urgencias, brindando primeros auxilios y asistencia a pacientes en situaciones críticas bajo la supervisión de médicos.",
   },
   {
     title: "Consultorios médicos ",
-    description:
-      "Algunas compañías privadas de salud contratan técnicos para cubrir eventos, deportes o situaciones laborales de alto riesgo, ofreciendo atención inmediata en caso de emergencia.",
+    // description: "Algunas compañías privadas de salud contratan técnicos para cubrir eventos, deportes o situaciones laborales de alto riesgo, ofreciendo atención inmediata en caso de emergencia.",
   },
   {
     title: "Residencias geriátricas y centros de rehabilitación",
-    description:
-      "Trabajan en instituciones educativas, universidades o en eventos deportivos, brindando primeros auxilios en situaciones de emergencia.",
+    // description: "Trabajan en instituciones educativas, universidades o en eventos deportivos, brindando primeros auxilios en situaciones de emergencia.",
   },
 ];
 
