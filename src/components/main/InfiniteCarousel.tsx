@@ -10,8 +10,8 @@ import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 const baseCards = [
   {
-    description: 'Técnico Superior Urgencias y Emergencias en Salud',
-    careerName: 'Urgencias y Emergencias en Salud',
+    careerName: 'Técnico Superior en Urgencias y Emergencias en Salud',
+    description: 'Urgencias y Emergencias en Salud',
     image:  imageUrgencias,
     rearFaceText: 'Prepárate para brindar atención integral a los pacientes, participando en la prevención, recuperación y rehabilitación.',
     redirectPath: '/academic/1'
