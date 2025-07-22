@@ -13,7 +13,6 @@ import studentsGroup from '../../public/students.png';
 import bgNavbar from '../../public/papelBg.svg';
 
 const navItems = [
-  { name: 'Inicio', href: '/' },
   { name: 'Sobre Yeshiva', href: '/about' },
   { name: 'Oferta Académica', href: '/academic' },
   // { name: 'Noticias', href: '/notices' },
