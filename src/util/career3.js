@@ -1,5 +1,5 @@
 
-import oferta1 from '../../public/academicOffers/academic.png';
+import {enfermeria} from './relatedCarrers.js'
 
 const careerData = {
     title: "Técnico Medio en Nutrición",
@@ -30,15 +30,8 @@ const workArea = [
       "Apoyan en las áreas de urgencias, brindando primeros auxilios y asistencia a pacientes en situaciones críticas bajo la supervisión de médicos.",
   },
 ];
-
 const carreras = [
-  {
-    cardTitle: 'Enfermería',
-    carDescription: 'Formación profesional con prácticas clínicas en hospitales.',
-    cardImage: oferta1,
-    redirectPath: '/'
-  },
-  
+  enfermeria
 ];
 
 const statistics = [

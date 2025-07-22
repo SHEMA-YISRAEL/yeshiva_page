@@ -1,5 +1,5 @@
 
-import oferta1 from '../../public/academicOffers/academic.png';
+import {enfermeria} from './relatedCarrers.js'
 
 const careerData = {
     title: "Técnico Superior en Laboratorio de Anatomía Patológica",
@@ -51,13 +51,7 @@ const workArea = [
 ];
 
 const carreras = [
-  {
-    cardTitle: 'Enfermería',
-    carDescription: 'Formación profesional con prácticas clínicas en hospitales.',
-    cardImage: oferta1,
-    redirectPath: '/'
-  },
-  
+  enfermeria
 ];
 
 const statistics = [
