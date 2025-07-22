@@ -36,7 +36,7 @@ export default function Navbar() {
           <Image
             src={yeshivaLogo}
             alt="Logo del Instituto"
-            className="h-17 w-full"
+            className="h-8 md:h-15 w-full"
           />
         </Link>
         {/* Botón para abrir/cerrar menú móvil */}
