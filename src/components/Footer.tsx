@@ -47,8 +47,7 @@ const CONTACTS = [
     label: 'Dirección',
     value: (
       <>
-        Torres América Norte, planta baja, of. 2<br />
-        Av. América entre Av. Pando y Av. M. Urquidi
+        Av. Sexta s/n casi esquina Av. Blanco Galindo Km 5,5 (zona Coña Coña)
       </>
     ),
     href: 'https://maps.app.goo.gl/THNj8FsY6HqvtwTB8',
