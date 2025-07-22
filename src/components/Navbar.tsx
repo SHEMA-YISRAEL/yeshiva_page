@@ -31,13 +31,13 @@ export default function Navbar() {
         alt="Footer Background" 
         className="absolute object-cover bg-[#EEB90A] h-full w-full -z-2"
       />
-      <div className="max-w-7xl mx-auto flex px-6 py-4 justify-between items-center z-5">
+      <div className="max-w-7xl mx-auto flex px-6 py-7 justify-between items-center z-5">
         {/* Logo */}
         <Link href="/">
           <Image
             src={yeshivaLogo}
             alt="Logo del Instituto"
-            className="h-10 w-full"
+            className="h-17 w-full"
           />
         </Link>
         {/* Botón para abrir/cerrar menú móvil */}
@@ -49,7 +49,7 @@ export default function Navbar() {
         </button>
 
         {/* Menú desktop */}
-        <ul className="hidden md:flex gap-6 text-lg font-medium text-white items-center">
+        <ul className="hidden md:flex gap-6 text-xl font-medium text-white items-center">
           {navItems.map(({ name, href }, i) => (
             <li key={i}>
               <Link
