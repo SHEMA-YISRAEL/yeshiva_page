@@ -16,7 +16,7 @@ import {
 // --- Constantes para links y redes ---
 const SERVICES_LINKS = [
   { label: 'Contáctanos', href: '/info' },
-  { label: 'Eventos', href: '/events' },
+  { label: 'Eventos', href: '/' },
   { label: 'Noticias', href: '/' },
 ];
 
