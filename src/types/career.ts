@@ -3,8 +3,6 @@ export type CareerType = {
   area:string,
   level:string,
   duration:string,
-  system:string,
-  schedules:string[],
   titleLabel:string,
   info:string,
   curriculum:string,

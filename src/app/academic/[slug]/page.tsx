@@ -19,8 +19,6 @@ const CareerInfoComponent:React.FC<CareerType> = ( careerData ) => {
       <p><span className="font-bold">Área de formación:</span> {careerData.area}</p>
       <p><span className="font-bold">Nivel de formación:</span> {careerData.level}</p>
       <p><span className="font-bold">Duración:</span> {careerData.duration}</p>
-      <p><span className="font-bold">Régimen de estudio:</span> {careerData.system}</p>
-      <p><span className="font-bold">Horarios:</span> {careerData.schedules.join(', ')}</p>
       <p><span className="font-bold">Título profesional:</span> {careerData.titleLabel}</p>
       <p>
         <span className="font-bold">Malla curricular:</span>{' '}
@@ -96,8 +94,6 @@ export default async function Page( { params }: { params: Promise<{ slug: string
             area={data.careerData.area} 
             level={data.careerData.level} 
             duration={data.careerData.duration} 
-            system={data.careerData.system} 
-            schedules={data.careerData.schedules} 
             titleLabel={data.careerData.title} 
             info={data.careerData.area} 
             curriculum={data.careerData.curriculum} 

@@ -6,9 +6,7 @@ const careerData = {
     duration: "2 años",
     area: "Salud",
     level: "Técnico superior",
-    system: "Anual sistema modular",
     label: "NUTRICIÓN Y DIETÉTICA",
-    schedules: ["Mañana", "Tarde", "Noche"],  
     curriculum: 'https://drive.google.com/file/d/12bY0LM35i37zrBQdWaQ_mJI-bv8zhUad/view?usp=sharing',
 }
 
