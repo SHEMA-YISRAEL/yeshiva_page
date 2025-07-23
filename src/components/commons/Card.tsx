@@ -105,7 +105,7 @@ const Card: FC<CardProps> = ({
             />
           )}
           <div className="w-4/5 absolute bottom-5 left-5 pr-9">
-            <div className={`font-bold text-white ${titleSize}`}>{cardTitle}</div>
+            <div className={`font-bold text-white ${titleSize} whitespace-pre-wrap`}>{cardTitle}</div>
             {showDescription && (
               <div className="text-white text-sm">
                 {showDate && date && <div className="text-yellow-400">{date}</div>}

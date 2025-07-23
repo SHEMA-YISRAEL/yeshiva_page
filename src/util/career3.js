@@ -2,29 +2,32 @@
 import {enfermeria} from './relatedCarrers.js'
 
 const careerData = {
-    title: "Técnico Medio en Nutrición",
+    title: "Técnico Medio en Laboratorio Clínico",
     duration: "2 años",
     area: "Salud",
-    level: "Técnico superior",
-    label: "NUTRICIÓN Y DIETÉTICA",
-    curriculum: 'https://drive.google.com/file/d/12bY0LM35i37zrBQdWaQ_mJI-bv8zhUad/view?usp=sharing',
+    level: "Técnico Medio",
+    label: "LABORATORIO CLÍNICO",
+    curriculum: 'https://drive.google.com/file/d/1lYMz2fT_lbzCvkvnXGAkE5hbVcmRsHxf/view?usp=sharing',
 }
 
 const whyStudyThis = [
-  "El profesional Técnico en Nutrición es un profesional capacitado para fomentar hábitos de alimentación saludable, contribuir a la prevención de enfermedades relacionadas con la nutrición y brindar apoyo en tratamientos nutricionales.",
-
-  "Cuenta con sólidos conocimientos en anatomía, fisiología, bioquímica de los alimentos, dietética y educación nutricional, lo que le permite desempeñarse de manera eficaz en distintos entornos del área de la salud y el bienestar."
+  "El Técnico en Laboratorio Clínico es un profesional capacitado para realizar, procesar y analizar muestras biológicas, con el objetivo de apoyar el diagnóstico, control y prevención de enfermedades. Su trabajo es clave para que médicos y especialistas tomen decisiones informadas y precisas sobre la salud de los pacientes."
 ]
 
 const workArea = [
   {
-    title: "Centros de salud públicos y privados",
-    // description: "Trabajan en equipos de paramédicos en ambulancias, respondiendo a emergencias médicas en el lugar del incidente y transportando a los pacientes a hospitales.",
-  },
-  {
     title: "Hospitales y clínicas",
     // description: "Apoyan en las áreas de urgencias, brindando primeros auxilios y asistencia a pacientes en situaciones críticas bajo la supervisión de médicos.",
   },
+  {
+    title: "Laboratorios de análisis clínico privados o públicos",
+    // description: "Trabajan en equipos de paramédicos en ambulancias, respondiendo a emergencias médicas en el lugar del incidente y transportando a los pacientes a hospitales.",
+  },
+  {
+    title: "Centros de diagnóstico y bancos de sangre",
+    // description: "Trabajan en equipos de paramédicos en ambulancias, respondiendo a emergencias médicas en el lugar del incidente y transportando a los pacientes a hospitales.",
+  },
+  
 ];
 const carreras = [
   enfermeria
