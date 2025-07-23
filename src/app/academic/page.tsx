@@ -4,9 +4,10 @@ import SectionTitle from '@/components/commons/SectionTitle';
 import Card from '@/components/commons/Card';
 
 import imageUrgencias from '../../../public/urgencias.png';
-import imageLaboratorio from '../../../public/laboratorio.png';
-import imageNutricion from '../../../public/nutricion.png';
+// import imageLaboratorio from '../../../public/laboratorio.png';
+// import imageNutricion from '../../../public/nutricion.png';
 import imageEnfermeria from '../../../public/enfermeria.png';
+import imageClinicLab from '../../../public/img/careers/clinicLab.webp';
 
 import oferta1 from '../../../public/academicOffers/academic.png';
 import { robotoSerif } from "../../util/fonts";
@@ -15,32 +16,32 @@ import "aos/dist/aos.css";
 
 const tecnicosSuperiores = [
   {
-    cardTitle: 'Técnico superior en emergencias y urgencias',
+    cardTitle: 'Urgencias y\nEmergencias en Salud',
     carDescription: 'Formación profesional con prácticas clínicas en hospitales.',
     cardImage: imageUrgencias,
     redirectPath: "/academic/1"
   },
-  {
-    cardTitle: 'Técnico Superior Laboratorio de Anatomía Patológica',
-    carDescription: 'Ayuda en el diagnóstico de enfermedades.',
-    cardImage: imageLaboratorio,
-    redirectPath: "/academic/2"
-  },
+  // {
+  //   cardTitle: 'Técnico Superior Laboratorio de Anatomía Patológica',
+  //   carDescription: 'Ayuda en el diagnóstico de enfermedades.',
+  //   cardImage: imageLaboratorio,
+  //   redirectPath: "/academic/2"
+  // },
 ];
 
 const tecnicosMedios = [
   {
-    cardTitle: 'Técnico Medio Nutrición y Dietética',
-    carDescription: 'Brinda apoyo en tratamientos nutricionales con buenos hábitos alimenticios. ',
-    cardImage: imageNutricion,
-    redirectPath: "/academic/3"
-  },
-  {
-    cardTitle: 'Técnico Medio Enfermería',
+    cardTitle: 'Enfermería',
     carDescription: 'Prepárate para brindar atención integral a los pacientes, participando en la prevención, recuperación y rehabilitación.',
     cardImage: imageEnfermeria,
     redirectPath: "/academic/4"
+  },{
+    cardTitle: 'Laboratorio Clínico',
+    carDescription: 'Apoyo en el diagnóstico, control y prevención de enfermedades',
+    cardImage: imageClinicLab,
+    redirectPath: "/academic/3"
   },
+  
 ];
 
 const becas = [
