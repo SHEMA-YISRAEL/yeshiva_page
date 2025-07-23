@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Card from '../commons/Card';
 import imageUrgencias from '../../../public/urgencias.png';
 import imageLaboratorio from '../../../public/laboratorio.png';
-import imageNutricion from '../../../public/nutricion.png';
+// import imageNutricion from '../../../public/nutricion.png';
 import imageEnfermeria from '../../../public/enfermeria.png';
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
@@ -57,7 +57,7 @@ export default function InfiniteCarousel() {
 
   useEffect(() => {
     const updateVisibleCards = () => {
-      let numberOfCards = getVisibleCards();
+      const numberOfCards = getVisibleCards();
       setVisibleControls(numberOfCards<3);
       setVisibleCards(numberOfCards);
     };
