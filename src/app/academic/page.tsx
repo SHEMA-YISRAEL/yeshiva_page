@@ -31,17 +31,17 @@ const tecnicosSuperiores = [
 
 const tecnicosMedios = [
   {
+    cardTitle: 'Laboratorio Clínico',
+    carDescription: 'Brinda apoyo en el diagnóstico, control y prevención de enfermedades',
+    cardImage: imageClinicLab,
+    redirectPath: "/academic/3"
+  },
+  {
     cardTitle: 'Enfermería',
     carDescription: 'Prepárate para brindar atención integral a los pacientes, participando en la prevención, recuperación y rehabilitación.',
     cardImage: imageEnfermeria,
     redirectPath: "/academic/4"
-  },{
-    cardTitle: 'Laboratorio Clínico',
-    carDescription: 'Apoyo en el diagnóstico, control y prevención de enfermedades',
-    cardImage: imageClinicLab,
-    redirectPath: "/academic/3"
   },
-  
 ];
 
 const becas = [

@@ -17,25 +17,26 @@ const baseCards = [
     redirectPath: '/academic/1'
   },
   {
-    careerName: 'Técnico Superior Laboratorio de Anatomía Patológica',
+    careerName: 'Técnico Medio en Laboratorio Clínico',
     description: 'Laboratorio de Anatomía Patológica',
     image: imageLaboratorio,
-    rearFaceText: 'Brinda atención pre hospitalaria y responde rápidamente en situaciones de emergencia',
-    redirectPath: '/academic/2'
-  },
-  {
-    careerName: 'Técnico Medio Nutrición y Dietética',
-    image: imageNutricion,
-    rearFaceText: 'Brinda apoyo en tratamientos nutricionales con buenos hábitos alimenticios.',
+    rearFaceText: 'Brinda apoyo en el diagnóstico, control y prevención de enfermedades',
     redirectPath: '/academic/3'
-  },
-  {
+  },{
     careerName: 'Técnico Medio en Enfermería',
     description: 'Enfermería',
     image: imageEnfermeria,
     rearFaceText: 'Brinda atención pre hospitalaria y responde rápidamente en situaciones de emergencia',
     redirectPath: '/academic/4'
   },
+  
+  // {
+  //   careerName: 'Técnico Medio Nutrición y Dietética',
+  //   image: imageNutricion,
+  //   rearFaceText: 'Brinda apoyo en tratamientos nutricionales con buenos hábitos alimenticios.',
+  //   redirectPath: '/academic/3'
+  // },
+  
   
 ];
 
@@ -44,6 +45,8 @@ export default function InfiniteCarousel() {
   const [visibleCards, setVisibleCards] = useState(3);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
+
+  const [visibleControls, setVisibleControls]=useState(true)
 
   // Responsive visible cards
   const getVisibleCards = () => {
@@ -54,7 +57,9 @@ export default function InfiniteCarousel() {
 
   useEffect(() => {
     const updateVisibleCards = () => {
-      setVisibleCards(getVisibleCards());
+      let numberOfCards = getVisibleCards();
+      setVisibleControls(numberOfCards<3);
+      setVisibleCards(numberOfCards);
     };
     updateVisibleCards();
     window.addEventListener('resize', updateVisibleCards);
@@ -77,17 +82,17 @@ export default function InfiniteCarousel() {
   //loop carrusel infinito
 
   // Reset para loop infinito
-  useEffect(() => {
-    if (currentSlide === totalSlides) {
-      const timeout = setTimeout(() => {
-        setIsTransitioning(false);
-        setCurrentSlide(0);
-      }, 500);
-      return () => clearTimeout(timeout);
-    } else {
-      setIsTransitioning(true);
-    }
-  }, [currentSlide, totalSlides]);
+  // useEffect(() => {
+  //   if (currentSlide === totalSlides) {
+  //     const timeout = setTimeout(() => {
+  //       setIsTransitioning(false);
+  //       setCurrentSlide(0);
+  //     }, 500);
+  //     return () => clearTimeout(timeout);
+  //   } else {
+  //     setIsTransitioning(true);
+  //   }
+  // }, [currentSlide, totalSlides]);
 
 
 
@@ -96,11 +101,13 @@ export default function InfiniteCarousel() {
     if (currentSlide < totalSlides) {
       setCurrentSlide((prev) => prev + 1);
       setIsTransitioning(true);
+    }else{
+      setCurrentSlide(0);
     }
   };
   const prevSlide = () => {
     if (currentSlide === 0) {
-      setCurrentSlide(totalSlides - 1);
+      setCurrentSlide(totalSlides);
     } else {
       setCurrentSlide((prev) => prev - 1);
       setIsTransitioning(true);
@@ -110,14 +117,16 @@ export default function InfiniteCarousel() {
   return (
     <div className="w-full overflow-hidden my-5 relative">
       {/* Flecha Izquierda */}
-      <button
-        className="absolute z-20 left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-yellow-400 rounded-full shadow p-2 text-3xl text-blue-900 transition"
-        onClick={prevSlide}
-        aria-label="Anterior"
-        style={{ left: 8 }}
-      >
-        <IoChevronBack />
-      </button>
+      { visibleControls?
+        <button
+          className="absolute z-20 left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-yellow-400 rounded-full shadow p-2 text-3xl text-blue-900 transition"
+          onClick={prevSlide}
+          aria-label="Anterior"
+          style={{ left: 8 }}
+        >
+          <IoChevronBack />
+        </button>:<></>
+      }
 
       {/* Carrusel */}
       <div className="relative">
@@ -150,17 +159,19 @@ export default function InfiniteCarousel() {
       </div>
 
       {/* Flecha Derecha */}
-      <button
-        className="absolute z-20 right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-yellow-400 rounded-full shadow p-2 text-3xl text-blue-900 transition"
-        onClick={nextSlide}
-        aria-label="Siguiente"
-        style={{ right: 8 }}
-      >
-        <IoChevronForward />
-      </button>
+      {visibleControls?
+        <button
+          className="absolute z-20 right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-yellow-400 rounded-full shadow p-2 text-3xl text-blue-900 transition"
+          onClick={nextSlide}
+          aria-label="Siguiente"
+          style={{ right: 8 }}
+        >
+          <IoChevronForward />
+        </button>:<></>
+      }
 
       {/* Indicadores clickeables */}
-      <div className="flex justify-center mt-4 space-x-2">
+      {/* <div className="flex justify-center mt-4 space-x-2">
         {baseCards.map((_, index) => (
           <button
             key={index}
@@ -171,7 +182,7 @@ export default function InfiniteCarousel() {
             aria-label={`Ir al slide ${index + 1}`}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

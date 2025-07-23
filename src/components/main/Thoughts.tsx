@@ -17,7 +17,7 @@ const Thoughts = () => {
   ];
 
   return (
-    <div className="px-3 sm:px-3 lg:px-5 mt-10 max-w-screen-xl mx-auto">
+    <div className="px-3 sm:px-3 lg:px-5 max-w-screen-xl mx-auto">
       <SectionTitle title="OPINIONES" size={2} />
 
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
