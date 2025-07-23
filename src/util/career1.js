@@ -6,9 +6,7 @@ const careerData = {
     duration: "3 años",
     area: "Salud",
     level: "Técnico superior",
-    system: "Anual sistema modular",
-    label: "EMERGENCIAS Y URGENCIAS MÉDICAS",
-    schedules: ["Mañana", "Tarde", "Noche"],  
+    label: "URGENCIAS Y EMERGENCIAS EN SALUD",
     curriculum: 'https://drive.google.com/file/d/1eMb4QaN1Vv0UeNIJuaMoY7DJhjLxwxjZ/view?usp=sharing',
     redirectPath: '/1'
 }

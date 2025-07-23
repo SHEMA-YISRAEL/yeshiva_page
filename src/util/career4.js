@@ -5,9 +5,9 @@ const careerData = {
     duration: "2 años",
     area: "Salud",
     level: "Técnico medio",
-    system: "Anual sistema modular",
+
     label: "ENFERMERÍA",
-    schedules: ["Mañana", "Tarde", "Noche"],  
+
     curriculum: 'https://drive.google.com/file/d/1sG9duDPIh5oKiaNHDI7nzLrDVvmNMySd/view?usp=sharing', 
 }
 

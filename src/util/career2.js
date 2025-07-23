@@ -6,9 +6,7 @@ const careerData = {
     duration: "3 años",
     area: "Salud",
     level: "Técnico superior",
-    system: "Anual sistema modular",
     label: "LABORATORIO DE ANATOMIA PATOLÓGICA",
-    schedules: ["Mañana", "Tarde", "Noche"],  
     curriculum: 'https://drive.google.com/file/d/18TEnOJFRvn0a9qKAL5PvZchM1SFzypG_/view?usp=sharing',
 }
 
