@@ -57,20 +57,20 @@ const CONTACTS = [
 
 // --- Componente principal ---
 const Footer = () => (
-  <div className="relative w-full text-[#1B3863]">      
+  <div className="relative w-full text-[#1B3863] ">      
       <Image
         src={bgFooter}
         alt="Footer Background" 
         className="absolute object-cover h-full w-full z-0"
       />      
-      <div className="absolute inset-0  bg-opacity-60 z-10"></div>      
+      <div className="absolute inset-0 bg-opacity-60 z-10"></div>      
       <div className='relative z-10'>
         <div className="flex justify-center">
           <Image
             src={logoFooter}
             alt='Logo Yeshiva'
-            // width={100}
-            className='w-2/3 sm:w-2/3 md:w-1/3'
+            //width={100}
+            className='w-2/3 sm:w-2/3 md:w-1/3 mt-25 md:mt-20 xl:mt-15'
           />
           {/* <h2 className="text-6xl sm:text-5xl md:text-8xl lg:text-8xl font-bold text-center uppercase mb-6 leading-tight">
             Yeshiva
