@@ -12,6 +12,7 @@ import valueCommitment from '../../../public/img/values/compromiso.png';
 import valuePassion from '../../../public/img/values/pasion.png';
 import valueIntegrity from '../../../public/img/values/integridad.png';
 import valueExcelence from '../../../public/img/values/excelencia.png';
+import valureHumanity from '../../../public/values/humanity.svg';
 
 import pastor from '../../../public/img/pastor.png';
 import { robotoSerif } from '@/util/fonts';
@@ -62,11 +63,6 @@ const values = [
     desc: "Buscamos la excelencia en el desarrollo de habilidades y conocimientos.",
     img: valueExcelence
   },
-  // {
-  //   name: "Humanidad",
-  //   desc: "Ponemos al ser humano en el centro, cultivando la empatía y la solidaridad.",
-  //   img: "/values/humanity.svg"
-  // }
 ];
 
 interface ParagraphWithTitleProps {
@@ -118,30 +114,26 @@ const History = () => {
   );
 }
 
-
-
 const Values = () => {
   return (
     <section className="mb-10" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">
       <SectionTitle size={sizeTitle} title="VALORES" />
-      <div className="relative left-20 my-5 md:my-15 sm:my-5">
-        <div 
-          className="flex justify-center mt-8"
-        >
-          {
-            values.map((element, index)=>{
-              
-              return <Image
-                key={index}
+      <div className="my-6 md:my-10">
+        <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-7">
+          {values.map((element, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <Image
                 src={element.img}
                 alt={element.name}
-                className={`object-contain relative w-32 md:w-50 right-${index*10} sm:w-30`}
+                width={100}
+                height={100}
+                className="object-contain w-30 sm:w-30 md:w-35 lg:w-40 xl:w-45 transition-transform duration-500"
                 data-aos="zoom-in"
-                data-aos-delay={400 * index}
+                data-aos-delay={200 * index}
                 data-aos-duration="500"
-              />    
-            })
-          }
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -175,13 +167,12 @@ const InternationalSupport = () => {
         alt="Apoyo Internacional"
         // width={500}
         // height={300}
-        
         className="object-contain w-full"
       />
     </div>
 
     <div 
-      className="text-center mt-4 text-sm text-gray-600 border-t-4 border-b-4 border-[#B3B3B3] p-4 italic" 
+      className="text-center mt-4 text-sm text-gray-600 border-t-2 border-b-2 border-[#B3B3B3] p-4 italic" 
       // data-aos="fade-up" data-aos-duration="900"
     >
       <span className="font-bold">Imagen: </span>
@@ -191,36 +182,21 @@ const InternationalSupport = () => {
 }
 
 const AboutPage = () => {
-  
   return (
     <main className="text-gray-700">
-      {/* Imagen de cabecera */}
-      {/* <div className="relative w-full h-[30vh] md:h-[50vh]" data-aos="fade-in">
-        <Image
-          alt="Portada"
-          src={imageClassRoom}
-          fill
-          className="object-cover brightness-50"
-        />
-      </div> */}
-
-      {/* Contenido */}
       <div className="max-w-5xl mx-auto px-4 py-10">
-        
         <History/>
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-8" 
-        // data-aos="fade-in"
-        >
-          <Paragraph  title="MISIÓN" paragraph={paragraphMision} />
-          <Paragraph  title="VISIÓN" paragraph={paragraphVision} />
+        {/* Grid responsivo: 1 columna en móvil, 2 en desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <Paragraph title="MISIÓN" paragraph={paragraphMision} />
+          <Paragraph title="VISIÓN" paragraph={paragraphVision} />
         </div>
         <Values />
         <InternationalSupport/>
-      
-
       </div>
     </main>
   );
 };
+
 
 export default AboutPage;
