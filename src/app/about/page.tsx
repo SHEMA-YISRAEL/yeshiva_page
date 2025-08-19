@@ -12,7 +12,7 @@ import valueCommitment from '../../../public/img/values/compromiso.png';
 import valuePassion from '../../../public/img/values/pasion.png';
 import valueIntegrity from '../../../public/img/values/integridad.png';
 import valueExcelence from '../../../public/img/values/excelencia.png';
-import valureHumanity from '../../../public/values/humanity.svg';
+
 
 import pastor from '../../../public/img/pastor.png';
 import { robotoSerif } from '@/util/fonts';
