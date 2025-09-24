@@ -8,8 +8,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  assetPrefix: isProduction? '/yeshiva_page' : '',
-  basePath: isProduction ? '/yeshiva_page' : '',
+  // assetPrefix: isProduction? '/yeshiva_page' : '',
+  // basePath: isProduction ? '/yeshiva_page' : '',
   output: 'export',
 };
 
