@@ -45,7 +45,7 @@ const variantStyles = {
     showDescription: false,
     showDate: false,
     showButton: true,
-    enableFlip: false,
+    enableFlip: true,
   },
   newsmainpage: {
     height: 'h-75',
@@ -123,7 +123,7 @@ const Card: FC<CardProps> = ({
         <div className="flip-card-back absolute w-full h-full rounded-2xl overflow-hidden bg-[#1B3863] flex flex-col items-center justify-center text-amber-50 p-6">
           {/* Aquí puedes personalizar la info del reverso según variante */}
           <div className="font-bold text-xl mb-2 text-center">
-            {variant === "beca" ? "¡Aprovecha tu oportunidad!" : ""}
+            {variant === "beca" ? "" : ""}
           </div>
           <div className="text-base text-center mb-2">
             {/* Ejemplo de info diferente */}
@@ -142,7 +142,10 @@ const Card: FC<CardProps> = ({
               </>
             )}
             {variant === "beca" && (
-              <div>Solicita tu beca exclusiva en Yeshiva hoy mismo.</div>
+              <>
+                <div className="mb-2 text-xl font-bold uppercase">{cardTitle}</div>
+                <div className='italic'>{rearFaceText}</div>
+              </>
             )}
             {/* Puedes personalizar para otros variants */}
           </div>

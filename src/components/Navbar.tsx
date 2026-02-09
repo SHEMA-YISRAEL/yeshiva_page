@@ -1,22 +1,22 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 
-import yeshivaLogo from '../../public/img/yeshivaLogoColor.svg'; 
+import yeshivaLogo from "../../public/img/yeshivaLogoColor.png";
 
-import Header from './main/Header';
+import Header from "./main/Header";
 //import imageStudent from '../../public/student_portait.png';
-import studentsGroup from '../../public/students.png';
-import bgNavbar from '../../public/papelBg.svg';
+import studentsGroup from "../../public/students.png";
+import bgNavbar from "../../public/papelBg.svg";
 
 const navItems = [
-  { name: 'Sobre Yeshiva', href: '/about' },
-  { name: 'Oferta Académica', href: '/academic' },
+  { name: "Sobre Yeshiva", href: "/about" },
+  { name: "Oferta Académica", href: "/academic" },
   // { name: 'Noticias', href: '/notices' },
-  { name: 'Información', href: '/info' },
+  { name: "Información", href: "/info" },
 ];
 
 export default function Navbar() {
@@ -27,7 +27,7 @@ export default function Navbar() {
     <nav className="shadow-md relative">
       <Image
         src={bgNavbar}
-        alt="Footer Background" 
+        alt="Footer Background"
         className="absolute object-cover bg-[#EEB90A] h-full w-full -z-2"
       />
       <div className="max-w-7xl mx-auto flex px-6 py-7 justify-between items-center z-5">
@@ -36,7 +36,7 @@ export default function Navbar() {
           <Image
             src={yeshivaLogo}
             alt="Logo del Instituto"
-            className="h-8 md:h-15 w-full"
+            className="h-8 md:h-18 w-full"
           />
         </Link>
         {/* Botón para abrir/cerrar menú móvil */}
@@ -54,7 +54,9 @@ export default function Navbar() {
               <Link
                 href={href}
                 className={`${
-                  pathname === href ? 'font-bold text-[#204378]' : 'text-[#1B3863]'
+                  pathname === href
+                    ? "font-bold text-[#204378]"
+                    : "text-[#1B3863]"
                 } hover:text-yellow-200 transition-colors duration-200`}
               >
                 {name}
@@ -67,7 +69,7 @@ export default function Navbar() {
       {/* Menú móvil deslizante desde la derecha */}
       <div
         className={`fixed top-0 right-0 z-50 h-full w-64 bg-[#1B3863] text-white  duration-300 ease-in-out ${
-          menuOpen ? 'translate-x-0 mb-500' : 'translate-x-full'
+          menuOpen ? "translate-x-0 mb-500" : "translate-x-full"
         } md:hidden shadow-lg`}
       >
         <div className="flex justify-end p-4">
@@ -82,7 +84,7 @@ export default function Navbar() {
                 href={href}
                 onClick={() => setMenuOpen(false)}
                 className={`block ${
-                  pathname === href ? 'text-yellow-300' : 'text-white'
+                  pathname === href ? "text-yellow-300" : "text-white"
                 } hover:text-yellow-200 transition-colors duration-200`}
               >
                 {name}
@@ -91,10 +93,7 @@ export default function Navbar() {
           ))}
         </ul>
       </div>
-    <Header
-        overlayImage={studentsGroup}
-        overlayAlt="Estudiante repasando"
-      />  
+      <Header overlayImage={studentsGroup} overlayAlt="Estudiante repasando" />
     </nav>
   );
 }
